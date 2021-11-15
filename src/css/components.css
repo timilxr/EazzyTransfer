@@ -1,0 +1,130 @@
+.modal_header_heading{
+    font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 20px;
+letter-spacing: 0.2px;
+color: #252733;
+opacity: 0.95;
+}
+
+.modal_input_labels{
+    font-family: Mulish;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 19px;
+letter-spacing: 0.1px;
+color: #4B506D;
+}
+
+.modal_inputs{
+    /* height: 48px; */
+border: 1.3px solid #E5E5E5;
+box-sizing: border-box;
+border-radius: 3px;
+}
+
+.modal_input_images{
+    width: 15.31px;
+height: 12.76px;
+}
+.modal_input_images_descriptions{
+    font-family: Nunito;
+font-style: normal;
+font-weight: bold;
+font-size: 8.93333px;
+line-height: 12px;
+color: #FFFFFF;
+}
+
+.modal_images_dropdown{
+    width: 67px;
+/* height: 27.44px; */
+background: #0A4A82;
+color: white;
+border: 0.510476px solid #0A4A82;
+box-sizing: border-box;
+border-radius: 0.638095px;
+}
+
+.modal_dropdown_menu{
+min-width: 20px !important;
+background: #0A4A82;
+color: white;
+border: 0.510476px solid #0A4A82;
+box-sizing: border-box;
+border-radius: 0.638095px;
+}
+
+.myaccount_amount{
+    font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0.4px;
+color: #252733;
+}
+
+.account_details_list{
+    font-family: Mulish;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 17px;
+color: rgba(75, 80, 109, 0.8);
+}
+
+label.label input[type="file"] {
+    position: absolute;
+    top: -1000px;
+}
+.label {
+      border: 1.3px solid #E5E5E5;
+      box-sizing: border-box;
+      border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    padding: 7px 15px;
+    margin: 5px;
+    display: inline-block;
+  }
+.label span{
+    background: #CFCFCF;
+mix-blend-mode: multiply;
+border: 0.5px solid #000000;
+box-sizing: border-box;
+border-radius: 4px;
+    cursor: pointer;
+    padding: 2px 15px;
+    font-family: 'Open Sans', 'mulish';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+letter-spacing: 0.02em;
+color: #383838;
+  }
+  .label:hover {
+    border: 3px solid #E5E5E5;
+  }
+.label:valid + span {
+      color: #000000;
+  }
+
+  .confirmation_notice{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #008753;
+
+    background: #F7F8FC;
+mix-blend-mode: multiply;
+border-radius: 1px;
+  }
