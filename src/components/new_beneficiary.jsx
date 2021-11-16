@@ -2,13 +2,13 @@ import React from "react";
 // import avatar from '../imgs/avatar.jpg';
 import aus from '../imgs/Rectangle 190.png';
 
-const NewBeneficiary = () => {
+const NewBeneficiary = ({showModal, ...props}) => {
     return (
         <>
             {/* <div class="m-0 p-0" style={{ borderBottom: '1px solid #DFE0EB' }}> */}
             <div class="m-0 p-0">
                 {/* <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> */}
-                <button type="button" class="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
+                <button type="button" onClick={()=>showModal(null)} class="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div className="d-flex align-items-center mt-4" style={{ height: '100px' }}>
@@ -21,7 +21,7 @@ const NewBeneficiary = () => {
                         <div class="form-group col-md-5 w-50">
                             <label className="modal_input_labels" for="exampleInputEmail1">Currency</label>
                             <div class="dropdown modal_inputs px-2 py-1">
-                                <a class="btn dropdown-toggle p-0 px-1 modal_images_dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="btn dropdown-toggle p-0 px-1 modal_images_dropdown d-flex align-items-center justify-content-between" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img src={aus} className="modal_input_images" alt="" /> <span className="modal_input_images_descriptions">USD</span>
                                 </a>
 

@@ -758,6 +758,8 @@ div.to_do_list > span:hover{
     border: 1px solid #e5e5e5;
     border-radius: 50px;
     padding: 5px;
+    align-items: center;
+    display: flex;
 }
 .dashboard_search_input{
     border: 0 !important;
@@ -805,24 +807,30 @@ div.to_do_list > span:hover{
 .sidebar_btn{
     height: 56px;
     width: 100%;
+    display: flex;
+    /* background-color: honeydew; */
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: start;
     margin-right: 0 !important;
     margin-left: 0 !important;
     padding: 18px;
 }
 .sidebar_btn:hover{
-    border-left: 1px solid white;
-    background-color: #ececf0;
-    opacity: 0.8;
+    border-left: 7px solid white;
+    background-color: #ececf0be;
+    /* opacity: 0.8; */
 }
 .sidebar_btn_text{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    margin: 0;
     color: #A4A6B3;
 }
 .sidebar_icon{
    color: #9FA2B4;
-   margin-right: 30px;
+   margin-right: 10px;
 }
 .sidebar_hr{
    border-top: 1px solid #DFE0EB !important;
@@ -881,6 +889,10 @@ div.to_do_list > span:hover{
     color: #000 ;
     border-bottom: 2px solid #172755;
 }
+.transaction_nav_link_active{
+    color: #000 ;
+    border-bottom: 2px solid #172755;
+}
 .sort{
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
@@ -896,6 +908,13 @@ div.to_do_list > span:hover{
 .table_row{
     border-top: 0px !important;
     border-bottom: 0 !important;
+    color: #9FA2B4;
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 18px;
+letter-spacing: 0.2px;
 }
 .status{
     font-family: 'Poppins', sans-serif;
@@ -916,6 +935,7 @@ div.to_do_list > span:hover{
     font-weight: 400;
     text-align: left;
     margin-left: 20px;
+    color: #C5C7CD;
     margin-top: -7px;
     margin-bottom: 0 !important;
 }
@@ -990,7 +1010,7 @@ div.to_do_list > span:hover{
     color: #4B506D;
 }
 .account_card{
-    height: 100px;
+    min-height: 100px;
     border-radius: 10px !important;
     padding: 0.25rem !important;
 }
@@ -1004,6 +1024,8 @@ div.to_do_list > span:hover{
 .account_card_row{
     margin-left: 0 !important;
     margin-right: 0 !important;
+    padding-top: 8px;
+    cursor: pointer;
 }
 .account_card_col{
     padding-left: 10px !important;
@@ -1015,33 +1037,40 @@ div.to_do_list > span:hover{
     margin-left: 40%;
 }
 .currency_flag{
-    height: 40px;
-    width: 40px;
+    height: 31px;
+    width: 31px;
     border-radius: 50%;
-    margin-top: 8px;
+    /* margin-top: 8px; */
 }
 .currency_and_state{
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: left;
-    color: #4B506D;
-    margin-top: 10px;
+    font-family: Mulish;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0.08756476640701294px;
+text-align: left;
+color: #4B506D;
 }
 .currency{
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #9FA2B4;
-    margin-top: 10px;
+    font-family: Mulish;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 15px;
+letter-spacing: 0.17499999701976776px;
+text-align: left;
+color: #9FA2B4;
 }
 .account_value{
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #252733;
-    margin-top: 27px;
+    font-family: Mulish;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 18px;
+letter-spacing: 0.17512953281402588px;
+text-align: left;
+color: #252733;
 }
 .account_opening_card{
     margin-top: 50px;
@@ -1061,8 +1090,8 @@ div.to_do_list > span:hover{
 }
 .acc_opening_btn{
     color: #18C4FF !important;
-    margin-left: 820px;
-    margin-top: 30px;
+    /* margin-left: 820px; */
+    /* margin-top: 30px; */
 }
 
 .sidenav {
@@ -1113,18 +1142,197 @@ div.to_do_list > span:hover{
     margin-left: 45% !important;
     background-color:  #E8F8FF;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+/*terms and conditions*/
+.documentation_row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+}
+.documentation_col{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.documentation_title{
+    font-family: 'Open Sans', serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: justify;
+    color: #091E45;
+}
+.documentation_content{
+    font-family: 'Open Sans', serif;
+    font-size: 13px;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-align: justify;
+    color: #091E45;
+}
+/* helpdek row*/
+.helpdesk_row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+}
+.helpdesk_title{
+    font-family: Nunito;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2B8991;
+}
+.helprow{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.helpcol{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.helpcard{
+    width: 100%;
+    /* height: 430px; */
+    border-radius: 10px;
+}
+.helpcard_body{
+    margin-left: 15px;
+}
+.helpcard_icon{
+    margin-top: 6px;
+}
+.helpcard_title{
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #091E45;
+}
+.helpcard_subtitle{
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8692A6;
+}
+.helpcard_footer{
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #0898A0 !important;
+    background-color: #fff !important;
+    float: right !important;
+}
+.helpdesk_modal_header {
+    border-bottom: 0 !important;
+}
+.helpdesk_modal_footer {
+    border-top: 0 !important;
+}
+.helpdesk_modal_logo{
+    height: 40px;
+    /* border: 1px solid #e8e8ee; */
+    /* border-radius: 50%; */
+}
+.helpdesk_modal_logo_row{
+    margin-top: 20px;
+    display: flex;
+}
+.helpdesk_modal_title{
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #c4c4c4;
+    margin-bottom: 0 !important;
+}
+.helpdesk_modal_title_bold{
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.helpdesk_modal_timestamp{
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #091E45;
+}
+.helpdesk_modal_content{
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #545A65;
+    margin-top: 50px;
+}
+.helpdesk_modal_btn{
+    background-color: #2B8991;
+}
+.helpcard_question{
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #091E45;
+    border-bottom: 1px solid #c4c4c4;
+    margin-bottom: 5px;
+}
+.helpcard_answer{
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #545A65;
+}
+.further_question{
+    border-bottom: 0;
+}
+.support_btn{
+    background-color: #FDFDFD;
+    border: 0.5px solid #c4c4c4;
+}
+.whatsapp_icon{
+    color:  #25d366;
+}
 
 
 
@@ -1395,24 +1603,3 @@ div.to_do_list > span:hover{
         padding-left: 0 !important;
     }
 }
-
-.modal-main {
-    display: block; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    /* padding-top: 100px; Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-
-  .modal-content{
-      min-height: 100vh;
-      /* background-color: orange; */
-      margin: 0 0 0 auto !important;
-      right: 0 !important;
-  }

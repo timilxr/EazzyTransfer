@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import LandingPage from './landing_page';
-import { Route, Routes } from "react-router-dom";
-// import SignUp from './signup/signUp';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SignUp from './signup/signUp';
 import DashboardBody from "./dashboard/dashboard_body";
 import DropdownSearchSelection from "./currency_list";
+import Support from "./components/support";
+import TermsandConditions from "./components/terms_and_conditions";
+import PrivacyPolicy from "./components/privacy_policy";
+import HelpDesk from "./components/helpdesk";
 // import DashboardContent from "./dashboard/dashboard_content";
 
-import './css/eazzy_transfer.css';
 import './css/components.css';
+import './css/eazzy_transfer.css';
 
 
 const BASE_URL = '  http://api.exchangeratesapi.io/v1/latest?access_key=314e5de72710349184bf0957901f682c'
@@ -27,12 +31,19 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <Routes>
-        <Route exact path="/" element={<LandingPage />} />
-        <Route path="/sign-up" element={<DashboardBody />} />
-        <Route path="/currency" element={<DropdownSearchSelection />} />
-      </Routes>
+    <div className="m-0 p-0">
+      {/* <BrowserRouter> */}
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="dashboard/*" element={<DashboardBody />} />
+          <Route path="sign-up" element={<SignUp />} />
+          {/* <Route path="currency" element={<DropdownSearchSelection />} /> */}
+          <Route path="support" element={<Support />} />
+          <Route path="terms-and-conditions" element={<TermsandConditions />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="help-desk" element={<HelpDesk />} />
+        </Routes>
+      {/* </BrowserRouter> */}
     </div>
   );
 }

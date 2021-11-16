@@ -195,4 +195,4 @@ const TermsandConditions  = () => {
             </React.Fragment>
     )
 };
-export default TermsandConditions
+export default TermsandConditions;

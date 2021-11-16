@@ -1,13 +1,13 @@
 import React from "react";
 import aus from '../imgs/Rectangle 190.png';
 
-const AccountDetails = () => {
+const AccountDetails = ({showModal, ...props}) => {
     return (
         <>
             {/* <div class="m-0 p-0" style={{ borderBottom: '1px solid #DFE0EB' }}> */}
             <div class="m-0 p-0 px-2">
                 {/* <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> */}
-                <button type="button" class="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
+                <button type="button" onClick={()=>showModal(null)} class="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div className="d-flex align-items-center mt-4 ml-2" style={{ height: '100px' }}>
@@ -37,14 +37,14 @@ const AccountDetails = () => {
                         <h3 style={{fontWeight: '600', fontSize: '14px', fontFamily: 'Mulish', color: '#6C63FF', lineHeight: '17px'}}>3 STEPS INVOLVED</h3>
                         <ul className="px-4 py-2 account_details_list">
                             <li>Submit your pwan document </li>
-                            <li>Submit your pwan document </li>
-                            <li>Submit your pwan document </li>
+                            <li>Verify OTP with registered canada number </li>
+                            <li>Provide BVN code for verification </li>
                         </ul>
                     </div>
 
                     {/* <button type="submit" class="btn btn-primary modal_btn">Sign In</button> */}
                     <div className="w-100 text-center mt-5">
-                        <button type="submit" className="btn mb-2" style={{ background: '#172755', borderRadius: '2px', color: 'white', fontSize: '14px' }}>Open Account</button>
+                        <button type="" onClick={()=>showModal('account details 2')} className="btn mb-2" style={{ background: '#172755', borderRadius: '2px', color: 'white', fontSize: '14px' }}>Open Account</button>
                         {/* <p className="" style={{ color: '#FB4039', fontSize: '12px', fontWeight: '600' }}>
                         <span aria-hidden="true">&times;</span>
                         Delete Beneficiary

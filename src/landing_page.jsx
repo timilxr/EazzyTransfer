@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel, } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
@@ -10,6 +10,8 @@ import bg from './imgs/Vector.png';
 import wallet from './imgs/image 8.png';
 import six from './imgs/image 9.png';
 import Rectangle from './imgs/Rectangle 196.png';
+import rightCaret from './imgs/rightcaret.svg';
+import bigBullet from './imgs/bigbullet.svg';
 import security from './imgs/security.png';
 import usd from './imgs/united-states.png';
 import partnerOne from './imgs/Logo (1).png';
@@ -25,7 +27,31 @@ import avatar from './imgs/avatar.jpg';
 import RowThreeImg from './imgs/Image Placeholder.png';
 import DropdownSearchSelection from './currency_list.jsx'
 
+const FAQs = [
+  {
+    Q: 'What is a multicurrency account and how does it operate?',
+    A: 'Your eazzy transfer is an electrnic money account. It is diffrent from a bnak account because your money is safeguard, you can get an overdraft or loan and still earn an interest'
+  },
+  {
+    Q: 'How is the eazzy transfer bank diffrent from a bank account? How safe is my money?',
+    A: 'Your eazzy transfer is an electrnic money account. It is diffrent from a bnak account because your money is safeguard, you can get an overdraft or loan and still earn an interest'
+  },
+  {
+    Q: 'How long do international transfer take?',
+    A: 'Your eazzy transfer is an electrnic money account. It is diffrent from a bnak account because your money is safeguard, you can get an overdraft or loan and still earn an interest'
+  },
+  {
+    Q: 'Do deposits and transfer occur?',
+    A: 'Your eazzy transfer is an electrnic money account. It is diffrent from a bnak account because your money is safeguard, you can get an overdraft or loan and still earn an interest'
+  },
+  {
+    Q: 'How is the eazzy transfer bank diffrent from a bank account? How safe is my money?',
+    A: 'Your eazzy transfer is an electrnic money account. It is diffrent from a bnak account because your money is safeguard, you can get an overdraft or loan and still earn an interest'
+  },
+]
+
 const LandingPage = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(null);
 
 
   return (
@@ -77,27 +103,27 @@ const LandingPage = () => {
               <li className="row_one_sublist">Cheaper than all other financial services</li>
               <li className="row_one_sublist">Send money overseas at better exchange rates now</li>
             </ul>
-            <button type="button" class="btn btn-primary create_acc_btn">Get a free account</button>
+            <button type="button" className="btn btn-primary create_acc_btn">Get a free account</button>
             {/* <div className="sub_row_one">
   <h1 className="country_flag_row_title">Transaction to 120 countries</h1>
   <ul className="country_flag_row">
-    <li><div class="currency-flag currency-flag-usd">
+    <li><div className="currency-flag currency-flag-usd">
       <img src={Rectangle} alt="" className="row_one_img"/>
       </div></li>
-    <li><div class="currency-flag currency-flag-usd">
+    <li><div className="currency-flag currency-flag-usd">
       <img src={Rectangle} alt="" className="row_one_img"/>
       </div></li>
-      <li><div class="currency-flag currency-flag-usd">
+      <li><div className="currency-flag currency-flag-usd">
       <img src={Rectangle} alt="" className="row_one_img"/>
       </div></li>
-      <li><div class="currency-flag currency-flag-usd">
+      <li><div className="currency-flag currency-flag-usd">
       <img src={Rectangle} alt="" className="row_one_img"/>
       </div></li>
-      <li><div class="currency-flag currency-flag-usd">
+      <li><div className="currency-flag currency-flag-usd">
       <img src={Rectangle} alt="" className="row_one_img"/>
       </div></li>
-      <li><div class="currency-flag currency-flag-usd">
-      <i class="fas fa-chevron-right fa-2x" role="button" style={{marginTop: "2px", color: "#979797"}}></i>
+      <li><div className="currency-flag currency-flag-usd">
+      <i className="fas fa-chevron-right fa-2x" role="button" style={{marginTop: "2px", color: "#979797"}}></i>
       </div></li>
   </ul>
 </div> */}
@@ -112,7 +138,7 @@ const LandingPage = () => {
               </div>
               <div className="col-md-6 col-sm-6 ">
                 <Dropdown placeholder='Select currency' />
-                <select name="currencies" classname="flaglist" style={{ height: "80%", width: "100%" }}>
+                <select name="currencies" className="flaglist" style={{ height: "80%", width: "100%" }}>
                   <option value="Nigeria Naira - NGN"> NGN</option>
                   <option value="America (United States) Dollars - USD">
                     <img src={usd} alt="" className="currency_flag" /> USD</option>
@@ -139,7 +165,7 @@ const LandingPage = () => {
               </div>
               <div className="col-md-6 col-sm-6 flag_list">
 
-                <select name="currencies" classname="flaglist" style={{ height: "80%", width: "100%" }}>
+                <select name="currencies" className="flaglist" style={{ height: "80%", width: "100%" }}>
                   <option value="America (United States) Dollars - USD">
                     <img src={usd} alt="" className="currency_flag" />USD</option>
                   <option value="Australia Dollars - AUD"> NGN</option>
@@ -205,21 +231,21 @@ const LandingPage = () => {
                 </div>
                 <div className="to_do_list">
                   <div className="numbers">
-                    <i class="fas fa-landmark fa-2x"></i>
+                    <i className="fas fa-landmark fa-2x"></i>
                   </div>
                   <div className="to_do_title">Step 2: Upload a local currency</div>
                   <div className="to_do_subtitle">Pay once and it’s yours forever. Use it to build as many sites as you needs. </div>
                 </div>
                 <div className="to_do_list">
                   <div className="numbers">
-                    <i class="fas fa-wallet fa-2x"></i>
+                    <i className="fas fa-wallet fa-2x"></i>
                   </div>
                   <div className="to_do_title">Step 3:  Convert to choice of currency</div>
                   <div className="to_do_subtitle">Thats all done. Now you can explore any apps, any webs that are ours partnets to transfer with them </div>
                 </div>
                 <div className="to_do_list">
                   <div className="numbers">
-                    <i class="fas fa-exchange-alt fa-2x"></i>
+                    <i className="fas fa-exchange-alt fa-2x"></i>
                   </div>
                   <div className="to_do_title">  Step 4:  Make transfer</div>
                   <div className="to_do_subtitle">Thats all done. Now you can explore any apps, any webs that are ours partnets to transfer with them </div>
@@ -244,7 +270,7 @@ const LandingPage = () => {
             <div>
               <div className="row row_four_sub">
                 <div className="col-md-5 row_four_col_one">
-                  <select name="currencies" classname="flaglist" style={{ height: "100%", width: "100%" }}>
+                  <select name="currencies" className="flaglist" style={{ height: "100%", width: "100%" }}>
                     {/* <option selected value="">Select currency</option> */}
                     <option value="Australia Dollars - AUD"> NGN</option>
                     <option value="America (United States) Dollars - USD">
@@ -258,7 +284,7 @@ const LandingPage = () => {
                 </div>
                 <i className="fas fa-arrow-right fa-2x"></i>
                 <div className="col-md-5  row_four_col_two">
-                  <select name="currencies" classname="flaglist" style={{ height: "100%", width: "100%" }}>
+                  <select name="currencies" className="flaglist" style={{ height: "100%", width: "100%" }}>
                     <option value="America (United States) Dollars - USD">
                       <img src={usd} alt="" className="currency_flag" />USD</option>
                     <option value="Australia Dollars - AUD"> NGN</option>
@@ -275,12 +301,12 @@ const LandingPage = () => {
                   <div className="input-group">
                     <input type="text" className="form-control" aria-label="..." />
                     <div className="input-group-btn">
-                      <button type="button" className="btn btn-default dropdown-toggle row_four_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal Time <span class="caret"></span></button>
+                      <button type="button" className="btn btn-default dropdown-toggle row_four_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal Time <span className="caret"></span></button>
                       <ul className="dropdown-menu dropdown-menu-right row_four_dropdown">
                         <li><a href="#">13 hours delivery</a></li>
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
+                        <li role="separator" className="divider"></li>
                         <li><a href="#">Separated link</a></li>
                       </ul>
                     </div>
@@ -301,8 +327,8 @@ const LandingPage = () => {
               experience seamlessly way to send money abroad.
             </h6>
           </div>
-          {/* <div class="col-md-4">
-                <h2 class="row_nine_title">What are the major features</h2>
+          {/* <div className="col-md-4">
+                <h2 className="row_nine_title">What are the major features</h2>
             </div>
             <div className="col-md-4"></div>
             <div className="col-md-4">
@@ -310,41 +336,41 @@ const LandingPage = () => {
               We will also facilitate the business marketing of these products with our SEO experts so that they become a ready-to-use website and help sell a product from the company
               </h6>
             </div>
-            <div class="card-deck mt-4">
-                <div class="card row_nine_card">
-                    <div class="icon_nine_holder ">
+            <div className="card-deck mt-4">
+                <div className="card row_nine_card">
+                    <div className="icon_nine_holder ">
 
                     </div>
-                  <div class="card-body">
-                    <h5 class="card-title row_three_card_title">Send a request</h5>
-                    <p class="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
+                  <div className="card-body">
+                    <h5 className="card-title row_three_card_title">Send a request</h5>
+                    <p className="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
                   </div>
                 </div>
-                <div class="card row_nine_card">
-                    <div class="icon_nine_holder">
+                <div className="card row_nine_card">
+                    <div className="icon_nine_holder">
 
                     </div>
-                  <div class="card-body">
-                    <h5 class="card-title  row_nine_card_title">Relocation Package</h5>
-                    <p class="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
+                  <div className="card-body">
+                    <h5 className="card-title  row_nine_card_title">Relocation Package</h5>
+                    <p className="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
                   </div>
                 </div>
-                <div class="card row_nine_card">
-                    <div class="icon_nine_holder">
+                <div className="card row_nine_card">
+                    <div className="icon_nine_holder">
 
                     </div>
-                  <div class="card-body">
-                    <h5 class="card-title  row_nine_card_title">Work Permit</h5>
-                    <p class="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
+                  <div className="card-body">
+                    <h5 className="card-title  row_nine_card_title">Work Permit</h5>
+                    <p className="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
                   </div>
                 </div>
-                <div class="card row_nine_card">
-                    <div class="icon_nine_holder ">
+                <div className="card row_nine_card">
+                    <div className="icon_nine_holder ">
 
                     </div>
-                  <div class="card-body">
-                    <h5 class="card-title  row_nine_card_title">Tourist Visa</h5>
-                    <p class="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
+                  <div className="card-body">
+                    <h5 className="card-title  row_nine_card_title">Tourist Visa</h5>
+                    <p className="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
                   </div>
                 </div>
               </div> */}
@@ -395,20 +421,20 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="row row_ten">
-          <div class="col-md-4">
-            <h2 class="row_nine_title">What our customers are saying</h2>
+          <div className="col-md-4">
+            <h2 className="row_nine_title">What our customers are saying</h2>
           </div>
           <div className="col-md-4"></div>
           <div className="col-md-4">
-            <div class="btn-group" role="group" aria-label="Basic example" style={{ float: "right" }}>
-              <div type="button" class="btn btn-secondary row_ten_btn" style={{ width: "100px", paddingTop: "10px" }}><i class="fas fa-arrow-left fa-2x"></i></div>
-              <div type="button" class="btn btn-secondary row_ten_btn" style={{ width: "100px" }}><i class="fas fa-arrow-right fa-2x"></i></div>
+            <div className="btn-group" role="group" aria-label="Basic example" style={{ float: "right" }}>
+              <div type="button" className="btn btn-secondary row_ten_btn" style={{ width: "100px", paddingTop: "10px" }}><i className="fas fa-arrow-left fa-2x"></i></div>
+              <div type="button" className="btn btn-secondary row_ten_btn" style={{ width: "100px" }}><i className="fas fa-arrow-right fa-2x"></i></div>
             </div>
           </div>
-          <div class="card-deck mt-4">
-            <div class="card row_ten_card">
-              <div class="card-body row_ten_card_body">
-                <p class="card-text row_ten_card_text">
+          <div className="card-deck mt-4">
+            <div className="card row_ten_card">
+              <div className="card-body row_ten_card_body">
+                <p className="card-text row_ten_card_text">
                   Our team has been working at frispes for almost 2 months because our office still closed.
                   During working at frispes, we feel a new experience, we can feel working with a beautiful, modern, and comfortablm.
                 </p>
@@ -421,9 +447,9 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <div class="card row_ten_card">
-              <div class="card-body row_ten_card_body">
-                <p class="card-text row_ten_card_text">
+            <div className="card row_ten_card">
+              <div className="card-body row_ten_card_body">
+                <p className="card-text row_ten_card_text">
                   Our team has been working at frispes for almost 2 months because our office still closed.
                   During working at frispes, we feel a new experience, we can feel working with a beautiful, modern, and comfortablm.
                 </p>
@@ -436,9 +462,9 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <div class="card row_ten_card">
-              <div class="card-body row_ten_card_body">
-                <p class="card-text row_ten_card_text">
+            <div className="card row_ten_card">
+              <div className="card-body row_ten_card_body">
+                <p className="card-text row_ten_card_text">
                   Our team has been working at frispes for almost 2 months because our office still closed.
                   During working at frispes, we feel a new experience, we can feel working with a beautiful, modern, and comfortablm.
                 </p>
@@ -456,7 +482,7 @@ const LandingPage = () => {
         <div className="row_eight">
           <h1 className="row_eight_title">Frequently asked questions</h1>
           <h6 className="row_eight_subtitle">The most important part of the Startup Framework are the samples  </h6>
-          <Accordion>
+          {/* <Accordion>
             <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton>
@@ -514,7 +540,36 @@ const LandingPage = () => {
                 </p>
               </AccordionItemPanel>
             </AccordionItem>
-          </Accordion>
+          </Accordion> */}
+          <div className="row mt-3">
+            <div className="col-md-5 position-relative d-flex align-items-center p-0">
+              <div className="position-absolute p-0" style={{ right: '-5vw', zIndex: '1', cursor: 'pointer' }}>
+                <ul className="list-group">
+                  {
+                    FAQs.map((faq, index) => 
+                    <li key={index} onClick={() => setCurrentQuestion(faq)} className={`list-group-item ${currentQuestion === faq ? "question-active" : "question"}`}>
+                      <div className="d-flex justify-content-between">
+                      {/* <img src={bigBullet} alt="" /> */}
+                      <div className={`${currentQuestion === faq ? "bullet-active" : "bullet"}`}></div>
+                      <span className='ml-2 mr-4'>{faq.Q}</span>
+                      </div>
+                      <img src={rightCaret} alt="" />
+                    </li>
+                    )
+                  }
+                </ul>
+              </div>
+            </div>
+            <div className={`col-md-7 answer`}>
+              {
+                currentQuestion &&
+                <>
+                  <h2>{currentQuestion.Q}</h2>
+                  <p>{currentQuestion.A}</p>
+                </>
+              }
+            </div>
+          </div>
         </div>
         <div className="row footer">
           <div className="col-md-3">
@@ -549,9 +604,9 @@ const LandingPage = () => {
             <h6 className="footer_list_title">Reach us at</h6>
             <h6 className="footer_list_subtitle">eazzytransfer@gmail.com</h6>
             <h6 className="footer_list_subtitle">eazzytransfer@gmail.com</h6>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
+            <i className="fab fa-facebook-f"></i>
+            <i className="fab fa-twitter"></i>
+            <i className="fab fa-instagram"></i>
           </div>
         </div>
         <hr className="footer_hr" />

@@ -3,7 +3,7 @@ import avatar from '../imgs/avatar.jpg';
 import aus from '../imgs/Rectangle 190.png';
 import mastercard from '../imgs/mastercard.svg';
 
-const MyAccount = ({showModal, ...props}) => {
+const Beneficiary = ({showModal, ...props}) => {
   return (
     <>
       <div class="m-0 p-0" style={{ borderBottom: '1px solid #DFE0EB' }}>
@@ -24,9 +24,9 @@ const MyAccount = ({showModal, ...props}) => {
               </div>
             </div>
           </div>
-          <div className="col-md-5 align-items-center d-flex p-0">
+          {/* <div className="col-md-5 align-items-center d-flex p-0">
             <span className="myaccount_amount">$345,875</span>
-          </div>
+          </div> */}
         </div>
       </div>
       <div class="modal-body">
@@ -49,13 +49,13 @@ const MyAccount = ({showModal, ...props}) => {
         </div>
         <div className="w-100 text-center mt-5">
           <button className="btn mb-2" style={{ background: '#172755', borderRadius: '2px', color: 'white', fontSize: '14px' }}>Send Money</button>
-          {/* <p className="" style={{ color: '#FB4039', fontSize: '12px', fontWeight: '600' }}>
+          <p className="" style={{ color: '#FB4039', fontSize: '12px', fontWeight: '600', cursor: 'pointer' }}>
             <span aria-hidden="true" className="mr-1">&times;</span>
             Delete Beneficiary
-          </p> */}
+          </p>
         </div>
       </div>
     </>)
 }
 
-export default MyAccount;
+export default Beneficiary;

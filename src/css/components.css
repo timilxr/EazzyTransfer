@@ -1,3 +1,54 @@
+body{
+    font-family: 'Mulish', 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* signup */
+.signup_sidebar_container{
+    background: linear-gradient(180deg, #F5F6F8 1.18%, #C6D3DE 53.43%, #5F8DB5 87.74%);
+    min-height: 100vh;
+    padding: 0;
+}
+.signup_sidebar{
+    /* background: linear-gradient(180deg, #F5F6F8 1.18%, #C6D3DE 53.43%, #5F8DB5 87.74%); */
+    background-image: url(../imgs/elipses.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.bubbles{
+    background-image: url(../imgs/bubbles.svg);
+    background-size: contain;
+    background-position-x: -1vw;
+    background-repeat: no-repeat;
+    background-position-y: 20vh;
+    min-height: 76.27vh;
+    padding-top: 37.5vh;
+    padding-left: 10vw;
+    height: auto;
+}
+
+.logo_container{
+    width: 11.5vw;
+}
+
+.modal-main {
+    display: block;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* padding-top: 100px; Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .modal-content{
+      min-height: 100vh;
+  }
 .modal_header_heading{
     font-family: Mulish;
 font-style: normal;
@@ -41,7 +92,7 @@ color: #FFFFFF;
 
 .modal_images_dropdown{
     width: 67px;
-/* height: 27.44px; */
+min-height: 27.44px;
 background: #0A4A82;
 color: white;
 border: 0.510476px solid #0A4A82;
@@ -128,3 +179,135 @@ color: #383838;
 mix-blend-mode: multiply;
 border-radius: 1px;
   }
+
+  .answer{
+      min-height: 350px;
+    background: #e8f8ff7c;
+    mix-blend-mode: multiply;
+    padding: 2vw;
+    padding-left: 7vw;
+    /* opacity: 0.3; */
+    box-shadow: 0px 0px 40px -14px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+  }
+  .answer h2{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: rgba(9, 30, 69, 0.8);
+  }
+
+  .answer p{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(9, 30, 69, 0.8);
+  }
+
+  .question{
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      align-items: center;
+      padding: 10px !important;
+    text-align: left;
+      font-family: 'Nunito';
+font-style: normal;
+font-weight: normal;
+font-size: 16.5px;
+/* line-height: 20px; */
+color: rgba(9, 30, 69, 0.8);
+  }
+  
+  .question-active{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      text-align: left;
+      margin-top: 10px;
+      align-items: center;
+    padding: 10px !important;
+      background: #e8f8ff7c;
+      mix-blend-mode: multiply;
+      font-family: 'Nunito';
+font-style: normal;
+font-weight: normal;
+font-size: 16.5px;
+/* line-height: 20px; */
+color: rgba(9, 30, 69, 0.8);
+  }
+
+  .bullet{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #0898A0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .bullet-active{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #091E45;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  #other-beneficiary{
+    font-family: 'Mulish';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: left;
+    color: #4B506D;
+  }
+
+  .add_ben_btn{
+      display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: #18C4FF !important;
+    border: #18C4FF !important;
+    border-radius: 3px !important;
+
+    font-family: Mulish;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 0.5px;
+}
+
+.transaction_history{
+    font-family: Mulish;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 0.30000001192092896px;
+text-align: left;
+color: #252733;
+}
+
+.current-balance{
+    font-family: Mulish;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0.4000000059604645px;
+text-align: center;
+color: #252733;
+}

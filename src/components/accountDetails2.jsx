@@ -3,13 +3,13 @@ import { Label } from "semantic-ui-react";
 // import avatar from '../imgs/avatar.jpg';
 import aus from '../imgs/Rectangle 190.png';
 
-const AccountDetails2 = () => {
+const AccountDetails2 = ({showModal, ...props}) => {
     return (
         <>
             {/* <div class="m-0 p-0" style={{ borderBottom: '1px solid #DFE0EB' }}> */}
             <div class="m-0 p-0 pl-4">
                 {/* <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> */}
-                <button type="button" class="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
+                <button type="button" onClick={()=>showModal(null)} class="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div className="d-flex align-items-end mt-4" style={{ height: '70px' }}>
@@ -44,7 +44,7 @@ const AccountDetails2 = () => {
 
                     {/* <button type="submit" class="btn btn-primary modal_btn">Sign In</button> */}
                     <div className="w-50 text-center mt-5">
-                        <button type="submit" className="btn mb-2" style={{ background: '#172755', borderRadius: '2px', color: 'white', fontSize: '14px' }}>Open Account</button>
+                        <button type="" onClick={()=>showModal('account details 3')} className="btn mb-2" style={{ background: '#172755', borderRadius: '2px', color: 'white', fontSize: '14px' }}>Open Account</button>
                         {/* <p className="" style={{ color: '#FB4039', fontSize: '12px', fontWeight: '600' }}>
                         <span aria-hidden="true">&times;</span>
                         Delete Beneficiary
