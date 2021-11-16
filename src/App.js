@@ -18,17 +18,17 @@ const BASE_URL = '  http://api.exchangeratesapi.io/v1/latest?access_key=314e5de7
 
 
 function App() {
-  const [currencyOptions, setCurrencyOptions] = useState([])
-  console.log(currencyOptions)
+  // const [currencyOptions, setCurrencyOptions] = useState([])
+  // console.log(currencyOptions)
 
-  useEffect(() => {
-    fetch(BASE_URL)
-      .then(res => res.json())
-      .then(data => {
-        setCurrencyOptions([data.base, ...Object.keys(data.rates)
-        ])
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch(BASE_URL)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setCurrencyOptions([data.base, ...Object.keys(data.rates)
+  //       ])
+  //     })
+  // }, [])
 
   return (
     <div className="m-0 p-0">
