@@ -79,6 +79,7 @@ border-radius: 3px;
 
 .modal_input_images{
     width: 15.31px;
+    /* border-radius: 1px !important; */
 height: 12.76px;
 }
 .modal_input_images_descriptions{
