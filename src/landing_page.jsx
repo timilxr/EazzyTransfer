@@ -170,13 +170,13 @@ const LandingPage = () => {
           <div className="col-md-3"></div>
           <div className="row_one_col_two col-md-4">
             <div className="currency_one_div row d-flex align-items-center">
-              <div className="col-md-6 col-sm-6 text-center">
+              <div className="col-md-6 col-6 text-center">
                 <span className="send_currency m-0 p-0">You send</span>
                 <div>
                   <input type="number" className="currency_input" />
                 </div>
               </div>
-              <div className="col-md-6 col-sm-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
+              <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
                 <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
                   <div className="form-group bg-white h-100 w-100 rounded m-0">
                     <SelectCurrency name="send" options={CurrencyOptions} />
@@ -188,13 +188,13 @@ const LandingPage = () => {
               <h6 className="input_currency">1 EUR</h6><span className="equal_to_sign">=</span><h6 className="output_currency">0.8797 GBP</h6>
             </div>
             <div className="currency_two_div row d-flex align-items-center">
-              <div className="col-md-6 col-sm-6 text-center">
+              <div className="col-md-6 col-6 text-center">
                 <span className="recieve_currency">Recipient receives</span>
                 <div>
                   <input type="number" className="currency_input" />
                 </div>
               </div>
-              <div className="col-md-6 col-sm-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
+              <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
                 <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
                   <div className="form-group bg-white h-100 w-100 rounded m-0">
                     <SelectCurrency name="recieve" options={CurrencyOptions} />
@@ -507,7 +507,8 @@ const LandingPage = () => {
         <div className="row_eight">
           <h1 className="row_eight_title">Frequently asked questions</h1>
           <h6 className="row_eight_subtitle">The most important part of the Startup Framework are the samples  </h6>
-          {/* <Accordion>
+          <div className="d-block d-md-none">
+          <Accordion>
             <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton>
@@ -565,10 +566,12 @@ const LandingPage = () => {
                 </p>
               </AccordionItemPanel>
             </AccordionItem>
-          </Accordion> */}
-          <div className="row mt-3">
+          </Accordion>
+          </div>
+          <div className="row mt-3 d-none d-md-block">
             <div className="col-md-5 position-relative d-flex align-items-center p-0">
-              <div className="position-absolute p-0" style={{ right: '-5vw', zIndex: '1', cursor: 'pointer' }}>
+              {/* <div className="questions position-absolute p-0" style={{ right: '-5vw', zIndex: '1', cursor: 'pointer' }}> */}
+              <div className="questions p-0">
                 <ul className="list-group">
                   {
                     FAQs.map((faq, index) =>
