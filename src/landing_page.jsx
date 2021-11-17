@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel, } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
-import { Dropdown } from 'semantic-ui-react'
+import { Dropdown } from 'semantic-ui-react';
+import SelectCurrency from "./components/selectCurrency";
 // import {connect} from 'react-redux';
 // import {ReactCountryFlagsCurrencySelect} from 'react-country-flag-currency-picker';
 import logo from './imgs/eazzyfinancialsLOGOUPDATE (3).svg';
 import bg from './imgs/Vector.png';
 import wallet from './imgs/image 8.png';
 import six from './imgs/image 9.png';
+import aus from './imgs/Rectangle 190.png';
 import Rectangle from './imgs/Rectangle 196.png';
 import rightCaret from './imgs/rightcaret.svg';
 import bigBullet from './imgs/bigbullet.svg';
@@ -48,7 +50,44 @@ const FAQs = [
     Q: 'How is the eazzy transfer bank diffrent from a bank account? How safe is my money?',
     A: 'Your eazzy transfer is an electrnic money account. It is diffrent from a bnak account because your money is safeguard, you can get an overdraft or loan and still earn an interest'
   },
-]
+];
+const CurrencyOptions = [
+  {
+    img: aus,
+    value: "Nigeria Naira - NGN",
+    text: 'NGN'
+  },
+  {
+    img: aus,
+    value: "America (United States) Dollars - USD",
+    text: 'USD'
+  },
+  {
+    img: aus,
+    value: "Afghanistan Afghanis - AFN",
+    text: 'GBP'
+  },
+  {
+    img: aus,
+    value: "Albania Leke - ALL",
+    text: 'CAD'
+  },
+  {
+    img: aus,
+    value: "Algeria Dinars - DZD",
+    text: 'ZAR'
+  },
+  {
+    img: aus,
+    value: "Argentina Pesos - ARS",
+    text: 'EUR'
+  },
+  {
+    img: aus,
+    value: "Austria Schillings - ATS",
+    text: 'KES'
+  },
+];
 
 const LandingPage = () => {
   const [currentQuestion, setCurrentQuestion] = useState(null);
@@ -97,7 +136,7 @@ const LandingPage = () => {
 
 
         <div className="row row_one">
-          <div className="row_one_col_one col-md-7">
+          <div className="row_one_col_one col-md-5">
             <h1 className="row_one_title"> Cheaper, Faster money speed wave. </h1>
             <ul className="row_one_list">
               <li className="row_one_sublist">Cheaper than all other financial services</li>
@@ -128,53 +167,39 @@ const LandingPage = () => {
   </ul>
 </div> */}
           </div>
-          <div className="row_one_col_two col-md-5">
-            <div className="currency_one_div row">
-              <div className="col-md-6 col-sm-6">
-                <span className="send_currency">You send</span>
+          <div className="col-md-3"></div>
+          <div className="row_one_col_two col-md-4">
+            <div className="currency_one_div row d-flex align-items-center">
+              <div className="col-md-6 col-sm-6 text-center">
+                <span className="send_currency m-0 p-0">You send</span>
                 <div>
                   <input type="number" className="currency_input" />
                 </div>
               </div>
-              <div className="col-md-6 col-sm-6 ">
-                <Dropdown placeholder='Select currency' />
-                <select name="currencies" className="flaglist" style={{ height: "80%", width: "100%" }}>
-                  <option value="Nigeria Naira - NGN"> NGN</option>
-                  <option value="America (United States) Dollars - USD">
-                    <img src={usd} alt="" className="currency_flag" /> USD</option>
-                  <option value="Afghanistan Afghanis - AFN">GBP</option>
-                  <option value="Albania Leke - ALL"> CAD</option>
-                  <option value="Algeria Dinars - DZD"> ZAR</option>
-                  <option value="Argentina Pesos - ARS">EUR</option>
-                  <option value="Austria Schillings - ATS"> KES</option>
-
-                  {/* <select name="" id="" className=" flaglist"> */}
-                  {/* <ReactCountryFlagsCurrencySelect /> */}
-                </select>
+              <div className="col-md-6 col-sm-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
+                <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
+                  <div className="form-group bg-white h-100 w-100 rounded m-0">
+                    <SelectCurrency name="send" options={CurrencyOptions} />
+                  </div>
+                </div>
               </div>
             </div>
             <div className="currency_exchange_row">
               <h6 className="input_currency">1 EUR</h6><span className="equal_to_sign">=</span><h6 className="output_currency">0.8797 GBP</h6>
             </div>
-            <div className="currency_two_div row">
-              <div className="col-md-6 col-sm-6">
+            <div className="currency_two_div row d-flex align-items-center">
+              <div className="col-md-6 col-sm-6 text-center">
                 <span className="recieve_currency">Recipient receives</span>
                 <div>
                   <input type="number" className="currency_input" />
                 </div>
               </div>
-              <div className="col-md-6 col-sm-6 flag_list">
-
-                <select name="currencies" className="flaglist" style={{ height: "80%", width: "100%" }}>
-                  <option value="America (United States) Dollars - USD">
-                    <img src={usd} alt="" className="currency_flag" />USD</option>
-                  <option value="Australia Dollars - AUD"> NGN</option>
-                  <option value="Afghanistan Afghanis - AFN">GBP</option>
-                  <option value="Albania Leke - ALL"> CAD</option>
-                  <option value="Algeria Dinars - DZD"> ZAR</option>
-                  <option value="Argentina Pesos - ARS">EUR</option>
-                  <option value="Austria Schillings - ATS"> KES</option>
-                </select>
+              <div className="col-md-6 col-sm-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
+                <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
+                  <div className="form-group bg-white h-100 w-100 rounded m-0">
+                    <SelectCurrency name="recieve" options={CurrencyOptions} />
+                  </div>
+                </div>
               </div>
             </div>
             <h6 className="row_one_col_two_subscript">Recipent gets <span className="currency_amount">£ 3,200</span> more when compared to regular traditional banks</h6>
@@ -546,15 +571,15 @@ const LandingPage = () => {
               <div className="position-absolute p-0" style={{ right: '-5vw', zIndex: '1', cursor: 'pointer' }}>
                 <ul className="list-group">
                   {
-                    FAQs.map((faq, index) => 
-                    <li key={index} onClick={() => setCurrentQuestion(faq)} className={`list-group-item ${currentQuestion === faq ? "question-active" : "question"}`}>
-                      <div className="d-flex justify-content-between">
-                      {/* <img src={bigBullet} alt="" /> */}
-                      <div className={`${currentQuestion === faq ? "bullet-active" : "bullet"}`}></div>
-                      <span className='ml-2 mr-4'>{faq.Q}</span>
-                      </div>
-                      <img src={rightCaret} alt="" />
-                    </li>
+                    FAQs.map((faq, index) =>
+                      <li key={index} onClick={() => setCurrentQuestion(faq)} className={`list-group-item ${currentQuestion === faq ? "question-active" : "question"}`}>
+                        <div className="d-flex justify-content-between">
+                          {/* <img src={bigBullet} alt="" /> */}
+                          <div className={`${currentQuestion === faq ? "bullet-active" : "bullet"}`}></div>
+                          <span className='ml-2 mr-4'>{faq.Q}</span>
+                        </div>
+                        <img src={rightCaret} alt="" />
+                      </li>
                     )
                   }
                 </ul>

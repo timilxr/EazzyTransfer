@@ -53,24 +53,24 @@
     height: auto;
     background: rgb(95,141,181);
     background: linear-gradient(0deg, rgba(95,141,181,1) 21%,  rgba(245,246,248,1) 87%);
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
 .row_one_col_one{
-    max-width: 45% !important;
+    /* max-width: 45% !important;
     margin-top: 50px;
-    margin-right: 40px;
+    margin-right: 40px; */
 }
 .row_one_col_two{
     /* max-width: 36% !important; */
     /* background-color: #013055; */
-    height: 450px;
+    /* height: 450px;
     padding: 50px;
-    margin-left: 10%;
+    margin-left: 10%; */
 }
 .row_one_title{
     font-weight: 700;
@@ -115,8 +115,11 @@
     background-color: #0a4a82;
     margin-top: 20px;
     margin-bottom: 10px;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 5px;
+}
+.currency_one_div>div .currency_two_div>div{
+    height: 100% !important;
 }
 .flaglist{
     /* background-color: #0A4A82; */
@@ -179,7 +182,7 @@
     background-color: #0a4a82;
     /* margin-top: 20px; */
     margin-bottom: 10px;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 5px;
 }
 .row_one_col_two_subscript{
@@ -455,7 +458,8 @@ div.to_do_list > span:hover{
 }
 .row_six_img{
     display: block;
-    margin: auto;
+        width: 100%;
+        margin: auto;
 }
 /*row seven*/
 .row_seven{
@@ -819,6 +823,7 @@ div.to_do_list > span:hover{
 .sidebar_btn:hover{
     border-left: 7px solid white;
     background-color: #ececf0be;
+    /* text-decoration: none !important; */
     /* opacity: 0.8; */
 }
 .sidebar_btn_text{
@@ -1373,9 +1378,9 @@ color: #252733;
     margin-left: 0px;
     padding: 0px;
 }
-.flag_list{
+/* .flag_list{
     width: 50% !important;
-}
+} */
 .row_one_col_two_subscript {
     text-align: justify;
 }
@@ -1444,7 +1449,8 @@ color: #252733;
     padding-bottom: 30px;
 }
 .row_six_img {
-    height: 120px;
+        /* width: 100%; */
+        height: 120px;
 }
 .row_six_subtitle {
     text-align: justify;
