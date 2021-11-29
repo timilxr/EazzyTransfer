@@ -9,7 +9,7 @@ const UploadPassportPhoto = ({ proceed, ...props }) => {
                 <p className="current_step">Step 3/6</p>
                 <h3 className="verify_heading mt-5">Take a selfie</h3>
                 <p className="verify_subheading">We We’ll compare this with your document</p>
-                <div className="verify_body mt-5 px-md-5">
+                <div className="verify_body mt-5 px-md-3 px-lg-5">
                     <ul className="list-group p-0">
                         <li className="list-group-item border-0 p-0">
                             <div className="d-flex align-items-center p-0 m-0">

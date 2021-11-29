@@ -10,7 +10,7 @@ const CameraAccessDenied1 = ({ proceed, ...props }) => {
                 {!allow ?
                     <>
                         <p className="verify_subheading">When prompted, you must enable camera access to continue</p>
-                        <div className="verify_body text-center mt-5 px-md-5">
+                        <div className="verify_body text-center mt-5 px-lg-5">
                             <img src={camPermission} className="img-fluid mb-3 rounded" alt="Camera Access Denied" />
                             <div className="text-center mt-5">
                                 <p className="image-instruction mb-1" style={{ fontSize: '14px', lineHeight: '20px' }}>We can’t verify you without your camera</p>
@@ -21,7 +21,7 @@ const CameraAccessDenied1 = ({ proceed, ...props }) => {
                     :
                     <>
                         <p className="verify_subheading">We cant verify you without access to your camera</p>
-                        <div className="verify_body mt-5 px-md-5">
+                        <div className="verify_body mt-5 px-md-3 px-lg-5">
                             <div className="text-center mt-5">
                                 <fieldset className="text-left border rounded p-3">
                                     <legend className="ml-2 mb-0"><span className="photo-requirements">To continue</span></legend>

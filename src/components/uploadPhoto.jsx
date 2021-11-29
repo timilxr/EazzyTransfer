@@ -12,7 +12,7 @@ const UploadPhoto = ({ proceed, selectedDocument, ...props }) => {
                 <p className="current_step">Step 2/6</p>
                 <h3 className="verify_heading mt-5">Upload passport photo</h3>
                 <p className="verify_subheading">To continue, please check requirement</p>
-                <div className="verify_body mt-5 px-md-5">
+                <div className="verify_body mt-5 px-md-3 px-lg-5">
                     <form action="" enctype="multipart/form-data">
                         <fieldset className="border rounded p-3">
                             <legend className="ml-2 mb-0"><span className="photo-requirements">Requirement</span></legend>
@@ -28,7 +28,7 @@ const UploadPhoto = ({ proceed, selectedDocument, ...props }) => {
                                 </li>
                             </ul>
                         </fieldset>
-                        <div className="form-group text-center px-md-5 py-3">
+                        <div className="form-group text-center px-lg-5 py-3">
                             <label className="label2 border-0 text-center">
                             <input type="file" onChange={e => setImage(e.target.files[0])} className="form-control modal_inputs" id="photo" autoComplete="off" aria-describedby="emailHelp" placeholder="e.g. 24390" />
                             <span>Click to upload</span>
@@ -42,7 +42,7 @@ const UploadPhoto = ({ proceed, selectedDocument, ...props }) => {
                 {/* <p className="current_step">Step 2/6</p> */}
                 <h3 className="verify_heading mt-3">Confirm your image</h3>
                 {/* <p className="verify_subheading">To continue, please check requirement</p> */}
-                <div className="verify_body text-center mt-5 px-md-3 mr-md-5 pr-md-5">
+                <div className="verify_body text-center mt-5 px-md-3 mr-lg-5 pr-md-5">
                 {image && <img src={URL.createObjectURL(image)} className="img-fluid mb-3 rounded" width="100%" alt="means of identification" />}
                 <p className="image-instruction">Make sure your details are clear and unobstructed</p>
                     <div className="d-flex justify-content-between">

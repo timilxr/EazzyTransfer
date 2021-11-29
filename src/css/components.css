@@ -15,6 +15,9 @@ body{
     min-height: 100vh;
     padding: 0;
 }
+.sidebar_title_container{
+  padding: 37px;
+}
 .page_info{
   width: auto;
 }
@@ -513,4 +516,8 @@ letter-spacing: 0.5px;
   .sidebar_btn_active{
     padding: 13px;
 }
+.sidebar_title_container{
+  padding: 15px 27px;
+}
+
 }

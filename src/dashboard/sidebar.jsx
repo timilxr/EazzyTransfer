@@ -11,9 +11,9 @@ const Sidebar = ({ showModal, ...props }) => {
         <React.Fragment>
             {/* <div className="row dashboard_row"> */}
             <div className="m-0 w-100">
-                <div className="row" style={{ padding: "37px" }}>
+                <div className="row sidebar_title_container">
                     {/* <img src={logo} alt="" /> */}
-                    <h5 className="sidebar_title">Eazzy Transfer</h5>
+                    <h5 className="sidebar_title m-0">Eazzy Transfer</h5>
                 </div>
                 <div style={{ padding: "20px" }}>
                     <button type="button" onClick={() => showModal('send money')} className="btn btn-primary send_cash_btn">Send Money</button>

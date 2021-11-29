@@ -10,8 +10,8 @@ const PreferredDocument = ({ proceed, SupportedDocuments, setSelectedDocument, s
                 <p className="current_step">Step 1/6</p>
                 <h3 className="verify_heading mt-5">Choose preferred document</h3>
                 <p className="verify_subheading">Must be an official photo ID</p>
-                <div className="verify_body text-center mt-5 px-md-5">
-                    <ul className="list-group mx-md-3">
+                <div className="verify_body text-center mt-5 px-md-3 px-lg-5">
+                    <ul className="list-group mx-lg-3">
                         {
                             SupportedDocuments.map((doc, index) =>
                                 <li key={index} onClick={() => { setSelectedDocument(doc); proceed() }} className={`list-group-item my-1 ${selectedDocument === doc ? "question-active" : "question"} preferred-document rounded`}>

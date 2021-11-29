@@ -16,7 +16,7 @@ const SelfieCamera = ({ proceed, ...props }) => {
                 <div className="verify_container mx-auto bg-white rounded px-3 px-md-5 pb-5 pt-3">
                     <h3 className="verify_heading mt-3">Check your selfie</h3>
                     <p className="verify_subheading">Make sure your entire face is visible</p>
-                    <div className="verify_body text-center mt-4 px-md-3 pr-md-5 mr-md-5">
+                    <div className="verify_body text-center mt-4 px-md-3 pr-md-5 mr-lg-5">
                         {image && <img src={image} className="img-fluid mb-3 rounded" width="100%" alt="selfie photo" />}
                         <p className="image-instruction">Make sure your details are clear and unobstructed</p>
                         <div className="d-flex justify-content-between">
