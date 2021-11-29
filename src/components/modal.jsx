@@ -15,8 +15,8 @@ import AddMoney2 from './addMoney2';
 const Modal = ({ currentView, showModal, ...props }) => (<>
   <div className="modal-main container-fluid p-0" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div className="row p-0 m-0" role="document">
-      <div className="col-md-7"></div>
-      <div className="modal-content col-md-5">
+      <div className="col-sm-6 col-md-7"></div>
+      <div className="modal-content col-sm-6 col-md-5">
         { currentView === 'my account' && <MyAccount showModal={showModal} />}
         { currentView === 'new beneficiary' && <NewBeneficiary showModal={showModal} />}
         { currentView === 'beneficiary' && <Beneficiary showModal={showModal} />}

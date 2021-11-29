@@ -4,7 +4,7 @@ import logo from '../imgs/logo.svg'
 const SignUpSideBar = () => {
     return(
         <>
-        <div className="container-fluid signup_sidebar_container">
+        <div className="container-fluid signup_sidebar_container h-100">
             <div className="signup_sidebar">
             <div className="container-fluid bubbles">
                 <div className="logo_container">

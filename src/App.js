@@ -8,6 +8,7 @@ import Support from "./components/support";
 import TermsandConditions from "./components/terms_and_conditions";
 import PrivacyPolicy from "./components/privacy_policy";
 import HelpDesk from "./components/helpdesk";
+import UpdateProfile from "./components/updateProfile";
 // import DashboardContent from "./dashboard/dashboard_content";
 
 import './css/components.css';
@@ -37,6 +38,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="dashboard/*" element={<DashboardBody />} />
           <Route path="sign-up" element={<SignUp />} />
+          <Route path="update-profile" element={<UpdateProfile />} />
           {/* <Route path="currency" element={<DropdownSearchSelection />} /> */}
           <Route path="support" element={<Support />} />
           <Route path="terms-and-conditions" element={<TermsandConditions />} />
