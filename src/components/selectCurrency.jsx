@@ -10,7 +10,7 @@ const SelectCurrency = ({ label, message, options, selected, setValue, name, ...
 
     return (
         <>
-                {label && <label className="modal_input_labels" for="exampleInputEmail1">{label}</label>}
+                {label && <label className="modal_input_labels" htmlFor="exampleInputEmail1">{label}</label>}
                 <div className="dropdown modal_inputs p-0 h-100">
                     <a className="btn dropdown-toggle p-0 px-1 h-100 d-flex justify-content-between align-items-center" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {message ?

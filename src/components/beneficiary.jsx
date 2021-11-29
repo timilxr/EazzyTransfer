@@ -6,9 +6,9 @@ import mastercard from '../imgs/mastercard.svg';
 const Beneficiary = ({showModal, ...props}) => {
   return (
     <>
-      <div class="m-0 p-0" style={{ borderBottom: '1px solid #DFE0EB' }}>
-        {/* <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> */}
-        <button type="button" onClick={()=>showModal(null)} class="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
+      <div className="m-0 p-0" style={{ borderBottom: '1px solid #DFE0EB' }}>
+        {/* <h5 className="modal-title" id="exampleModalLabel">Modal title</h5> */}
+        <button type="button" onClick={()=>showModal(null)} className="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
         <div className="row p-0 m-0 mt-5">
@@ -29,7 +29,7 @@ const Beneficiary = ({showModal, ...props}) => {
           </div> */}
         </div>
       </div>
-      <div class="modal-body">
+      <div className="modal-body">
         <div className="d-flex flex-wrap justify-content-evenly align-items-evenly">
           <div className="w-50 pl-4 mb-3">
             <p className="m-0" style={{ fontWeight: '600', fontSize: '14px' }}>Account number</p>

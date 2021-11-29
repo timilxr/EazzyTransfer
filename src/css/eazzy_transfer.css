@@ -1,6 +1,7 @@
 /*header*/
 .menu_header{
-    background-color: #F5F6F8;
+    /* background-color: #F5F6F8; */
+    background-color: transparent;
 }
 .menu_link{
     color: black !important;
@@ -15,7 +16,8 @@
     justify-content: flex-end;
 }
 .nav-header{
-    background-color: #F5F6F8 !important;
+    /* background-color: #F5F6F8 !important; */
+    background-color: transparent !important;
 }
 .image_logo{
     float: left;
@@ -129,7 +131,7 @@
 .currency_exchange_row{
     border-left: 1px solid #0a4a82;
     height: 40px;
-    margin: 10px;
+    margin: 18px;
     padding: 12px;
     display: flex;
 }
@@ -609,7 +611,7 @@ div.to_do_list > span:hover{
 
 }
 .row_ten_card{
-    height: 400px;
+    min-height: 400px;
     background-color: #091E45;
     color: #fff;
     padding: 30px 25px;
@@ -618,6 +620,10 @@ div.to_do_list > span:hover{
     width: 60px;
     height: 60px;
     border-radius: 50%;
+}
+.row_ten_customer_info{
+    margin-left: 20px;
+    margin-top: 5px;
 }
 .row_ten_customer_name{
     font-family: 'Poppins', sans-serif;
@@ -681,7 +687,8 @@ div.to_do_list > span:hover{
   }
   .sign_up_col_one{
     background: #10375CE5;
-    height: 730px;
+    min-height: 100vh;
+    /* height: 730px; */
   }
   .sign_up_col_two{
       padding: 100px;
@@ -751,7 +758,7 @@ div.to_do_list > span:hover{
     width: 100%;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    padding:46px;
+    /* padding:46px; */
 }
 .transaction_header{
     font-family: 'Poppins', sans-serif;
@@ -759,14 +766,16 @@ div.to_do_list > span:hover{
     font-weight: 700;
 }
 .dashboard_search{
-    border: 1px solid #e5e5e5;
-    border-radius: 50px;
-    padding: 5px;
+    border-bottom: 1px solid #e5e5e5;
+    /* border-radius: 50px; */
+    padding: 0 5px;
+    width: 100%;
     align-items: center;
     display: flex;
 }
 .dashboard_search_input{
     border: 0 !important;
+    width: 100%;
 }
 .fa-bell{
     margin-left: 20px;
@@ -786,13 +795,10 @@ div.to_do_list > span:hover{
     margin-left: 20px;
 }
 /*-------------------------------------------------sidebar--------------------------------------------------------------*/
-.dashboard_sidebar{
-    padding-left: 1px !important;
-    padding-right: 0 !important;
-}
 .sidebar{
     background-color: #172755;
-    height: 730px;
+    min-height: 100vh;
+    /* height: 730px; */
 }
 .sidebar_title{
     font-size: 19px;
@@ -806,7 +812,7 @@ div.to_do_list > span:hover{
     width: -webkit-fill-available;
     background-color: #18C4FF !important;
     border: #18C4FF !important;
-    border-radius: 0 !important;
+    /* border-radius: 0 !important; */
 }
 .sidebar_btn{
     height: 56px;
@@ -826,6 +832,7 @@ div.to_do_list > span:hover{
     /* text-decoration: none !important; */
     /* opacity: 0.8; */
 }
+
 .sidebar_btn_text{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -834,6 +841,7 @@ div.to_do_list > span:hover{
     color: #A4A6B3;
 }
 .sidebar_icon{
+    /* font-size: x-small; */
    color: #9FA2B4;
    margin-right: 10px;
 }
@@ -841,10 +849,6 @@ div.to_do_list > span:hover{
    border-top: 1px solid #DFE0EB !important;
 }
 /*------------------------------------------------dasshboard body------------------------------------------------------*/
-.dashboard_mainbody{
-    padding-left: 1px !important;
-    padding-right: 0 !important;
-}
 .dashboard_body{
     background-color: #F7F8FC;
     height: 85%;
@@ -1016,6 +1020,8 @@ letter-spacing: 0.2px;
 }
 .account_card{
     min-height: 100px;
+    width: 12.8vw;
+    margin: 7px 0;
     border-radius: 10px !important;
     padding: 0.25rem !important;
 }
@@ -1033,8 +1039,8 @@ letter-spacing: 0.2px;
     cursor: pointer;
 }
 .account_card_col{
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 .fa-plus-circle{
     text-align: center;
@@ -1345,17 +1351,252 @@ color: #252733;
 
 
   /*---------------------------------------------media screens-----------------------------------------------*/
-  @media screen and (min-width: 0px) and (max-width: 767px){
+  @media screen and (min-width: 0px) and (max-width: 380px){
     .sign_input_div{
         display: none;
     }
     .small_screen_sign{
         display: block;
     }
+    .sign_up_col_one{
+        display: none
+      }
+    .sign_up_col_two{
+        padding: 40px;
+    }
   .row_one{
     padding-left: 30px;
     padding-right: 30px;
   }
+  .currency_one_div {
+    padding: 0px;
+}
+.transaction_tab{
+    margin-left: 10px !important;
+    padding: 20px;
+}
+.account_card{
+    width: 40vw;
+}
+.account_card_col{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.currency_two_div {
+    padding: 0px;
+}
+  .row_one_col_one{
+      max-width: 100% !important;
+      margin-right: 0px;
+  }
+  .row_one_img {
+    width: 30px;
+    height: 20px;
+}
+.fa-chevron-right{
+    font-size: 1rem;
+}
+.row_one_col_two {
+    max-width: 100% !important;
+    margin-left: 0px;
+    padding: 0px;
+}
+/* .flag_list{
+    width: 50% !important;
+} */
+.row_one_col_two_subscript {
+    text-align: justify;
+}
+.create_acc_btn {
+    margin-left: 0px;
+    width: 100%;
+}
+/*row two*/
+.row_two {
+    padding: 30px;
+}
+.row_two_subtitle {
+    text-align: justify;
+}
+/*row three*/
+.row_three {
+    padding: 30px;
+}
+.to_do_list {
+    margin-top: 30px;
+}
+.sub_row_three {
+    padding-right: 0px;
+}
+/*row four*/
+.row_four{
+    padding: 30px;
+}
+.row_four_col_one {
+    width: 130px;
+    margin-right: 10px;
+}
+.row_four_col_one_content {
+    padding-left: 0px;
+    padding-right: 7px;
+    padding-top: 7px;
+}
+.row_four_col_two {
+    width: 130px;
+    margin-right: 10px;
+}
+.row_four_col_two_content {
+    padding-left: 0px;
+    padding-right: 7px;
+    padding-top: 7px;
+}
+.row_four_sub_col_img {
+    height: 20px;
+    width: 36px;
+}
+/*row five*/
+.row_five {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.row_five_col {
+    padding-right: 0px;
+}
+/* row six*/
+.row_six {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.row_six_img {
+        /* width: 100%; */
+        height: 120px;
+}
+.row_six_subtitle {
+    text-align: justify;
+}
+/*row seven*/
+.row_seven {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/*row eight*/
+.row_eight {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+/*row nine*/
+.row_nine {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.row_nine_col_one {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.row_nine_subtitle {
+    line-height: 34px;
+}
+.row_nine_col_two {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+/*row ten*/
+.row_ten {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.row_ten_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.row_ten_card_div{
+    margin-top: 0px;
+    display: flex;
+    /* align-items: center; */
+}
+.row_ten_customer_info{
+    margin-left: 10px;
+    margin-top: 0px;
+}
+.customer_designation{
+    font-size: 12px;
+}
+.row_ten_customer_name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 0 !important;
+}
+.row_ten_card {
+    min-height: 340px;
+    padding: 5px 5px;
+}
+.accordion__button {
+    width: 100% !important;
+}
+.accordion__panel {
+    margin-left: 0 !important;
+}
+.footer {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.sidebar{
+    display: none;
+}
+.footer_list {
+    padding-left: 0 !important;
+}
+}
+
+  @media screen and (min-width: 381px) and (max-width: 768px){
+    .sign_input_div{
+        display: none;
+    }
+    .small_screen_sign{
+        display: block;
+    }
+.sidebar_btn{
+    padding: 13px;
+}
+    .sidebar_btn_text{
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0;
+        color: #A4A6B3;
+    }
+    .send_cash_btn{
+        font-size: 12px;
+        padding: 10px 0px;
+    }
+  .row_one{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .account_card{
+    width: 30vw;
+}
+.account_card_col{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
   .currency_one_div {
     padding: 0px;
 }
@@ -1492,11 +1733,36 @@ color: #252733;
     padding-left: 30px;
     padding-right: 30px;
 }
+.row_ten_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 .row_ten_card_div{
-    margin-top: 60px;
+    margin-top: 0px;
+    display: flex;
+    /* align-items: center; */
+}
+.row_ten_customer_info{
+    margin-left: 10px;
+    margin-top: 0px;
+}
+.customer_designation{
+    font-size: 12px;
+}
+.row_ten_customer_name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 0 !important;
 }
 .row_ten_card {
-    height: 340px;
+    min-height: 340px;
     padding: 5px 5px;
 }
 .accordion__button {

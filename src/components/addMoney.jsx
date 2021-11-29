@@ -7,13 +7,13 @@ import mastercard from '../imgs/mastercard.svg';
 const AddMoney = ({showModal, ...props}) => {
     return (
         <>
-            <div class="m-0 p-0" style={{ borderBottom: '1px solid #DFE0EB' }}>
-                {/* <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> */}
-                <button type="button" onClick={()=>showModal(null)} class="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
+            <div className="m-0 p-0" style={{ borderBottom: '1px solid #DFE0EB' }}>
+                {/* <h5 className="modal-title" id="exampleModalLabel">Modal title</h5> */}
+                <button type="button" onClick={()=>showModal(null)} className="close mr-4 mt-4" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div className="row p-0 m-0 mt-5">
-                    <div className="col-md-6 p-0 m-0">
+                    <div className="col-8 col-md-6 p-0 m-0">
                         <div className="d-flex align-items-center" style={{ height: '100px' }}>
                             <img src={avatar} className="img-fluid user_image" alt="" />
                             <div className="ml-3">
@@ -25,16 +25,16 @@ const AddMoney = ({showModal, ...props}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6 align-items-center d-flex p-0">
-                        <div class="form-group d-flex align-items-center mt-3">
+                    <div className="col-4 col-md-6 align-items-center d-flex p-0">
+                        <div className="form-group d-flex align-items-center mt-3">
                             {/* <label className="modal_input_labels" for="exampleInputEmail1">Sort code</label> */}
-                            <input type="radio" class="form-control m-0 p-0" id="exampleInputEmail1" style={{ fontSize: '12px', width: '15px', height: '15px' }} aria-describedby="emailHelp" />
-                            <span className="myaccount_amount text-secondary ml-2" style={{ fontSize: '12px' }}>Save account as beneficiary</span>
+                            <input type="radio" className="form-control m-0 p-0" id="exampleInputEmail1" style={{ fontSize: '12px', width: '15px', height: '15px' }} aria-describedby="emailHelp" />
+                            <span className="myaccount_amount text-secondary m-0 ml-2" style={{ fontSize: '12px' }}>Save account as beneficiary</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
                 <div className="d-flex flex-wrap justify-content-evenly align-items-evenly">
                     <div className="w-50 pl-4 mb-3">
                         <p className="m-0" style={{ fontWeight: '600', fontSize: '14px' }}>Account number</p>

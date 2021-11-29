@@ -122,7 +122,10 @@ const LandingPage = () => {
                     <Link className="nav-link" to="support">Support</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link small_screen_sign" to="support">Sign In</Link>
+                    <Link className="nav-link small_screen_sign" to="sign-in">Sign In</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link small_screen_sign" to="sign-up">Sign Up</Link>
                   </li>
                 </ul>
               </div>
@@ -167,16 +170,16 @@ const LandingPage = () => {
   </ul>
 </div> */}
           </div>
-          <div className="col-md-3"></div>
-          <div className="row_one_col_two col-md-4">
-            <div className="currency_one_div row d-flex align-items-center">
-              <div className="col-md-6 col-sm-6 text-center">
+          <div className="col-md-3 mt-4 mt-md-0"></div>
+          <div className="row_one_col_two col-md-4 mx-auto p-0">
+            <div className="currency_one_div row d-flex align-items-center m-0">
+              <div className="col-md-6 col-6 text-center">
                 <span className="send_currency m-0 p-0">You send</span>
                 <div>
                   <input type="number" className="currency_input" />
                 </div>
               </div>
-              <div className="col-md-6 col-sm-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
+              <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
                 <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
                   <div className="form-group bg-white h-100 w-100 rounded m-0">
                     <SelectCurrency name="send" options={CurrencyOptions} />
@@ -187,14 +190,14 @@ const LandingPage = () => {
             <div className="currency_exchange_row">
               <h6 className="input_currency">1 EUR</h6><span className="equal_to_sign">=</span><h6 className="output_currency">0.8797 GBP</h6>
             </div>
-            <div className="currency_two_div row d-flex align-items-center">
-              <div className="col-md-6 col-sm-6 text-center">
+            <div className="currency_two_div row d-flex align-items-center m-0">
+              <div className="col-md-6 col-6 text-center">
                 <span className="recieve_currency">Recipient receives</span>
                 <div>
                   <input type="number" className="currency_input" />
                 </div>
               </div>
-              <div className="col-md-6 col-sm-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
+              <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
                 <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
                   <div className="form-group bg-white h-100 w-100 rounded m-0">
                     <SelectCurrency name="recieve" options={CurrencyOptions} />
@@ -425,22 +428,22 @@ const LandingPage = () => {
           <h1 className="row_seven_title">Our partner companies</h1>
           <h6 className="row_seven_subtitle">Big brands, small bussiness, new startup, corporate and inividuals  </h6>
           <div className="row mt-5">
-            <div className="col-md-2">
+            <div className="col-md-2 mb-3 mb-sm-0">
               <img src={partnerOne} alt="" className="row_seven_img" />
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 mb-3 mb-sm-0">
               <img src={partnerTwo} alt="" className="row_seven_img" />
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 mb-3 mb-sm-0">
               <img src={partnerThree} alt="" className="row_seven_img" />
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 mb-3 mb-sm-0">
               <img src={partnerFour} alt="" className="row_seven_img" />
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 mb-3 mb-sm-0">
               <img src={partnerFive} alt="" className="row_seven_img" />
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 mb-3 mb-sm-0">
               <img src={partnerSix} alt="" className="row_seven_img" />
             </div>
           </div>
@@ -465,7 +468,7 @@ const LandingPage = () => {
                 </p>
                 <div className="row_ten_card_div">
                   <img src={avatar} className="row_ten_img" alt="" />
-                  <div style={{ marginLeft: "20px", marginTop: "5px" }}>
+                  <div className="row_ten_customer_info">
                     <h6 className="row_ten_customer_name"> Julius Berger</h6>
                     <p className="customer_designation">Importer/Exporter</p>
                   </div>
@@ -480,7 +483,7 @@ const LandingPage = () => {
                 </p>
                 <div className="row_ten_card_div">
                   <img src={avatar} className="row_ten_img" alt="" />
-                  <div style={{ marginLeft: "20px", marginTop: "5px" }}>
+                  <div className="row_ten_customer_info">
                     <h6 className="row_ten_customer_name"> Julius Berger</h6>
                     <p className="customer_designation">Importer/Exporter</p>
                   </div>
@@ -495,7 +498,7 @@ const LandingPage = () => {
                 </p>
                 <div className="row_ten_card_div">
                   <img src={avatar} className="row_ten_img" alt="" />
-                  <div style={{ marginLeft: "20px", marginTop: "5px" }}>
+                  <div className="row_ten_customer_info">
                     <h6 className="row_ten_customer_name"> Julius Berger</h6>
                     <p className="customer_designation">Importer/Exporter</p>
                   </div>
@@ -507,92 +510,97 @@ const LandingPage = () => {
         <div className="row_eight">
           <h1 className="row_eight_title">Frequently asked questions</h1>
           <h6 className="row_eight_subtitle">The most important part of the Startup Framework are the samples  </h6>
-          {/* <Accordion>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  What harsh truths do you prefer to ignore?
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <p>
-                  Exercitation in fugiat est ut ad ea cupidatat ut in
-                  cupidatat occaecat ut occaecat consequat est minim minim
-                  esse tempor laborum consequat esse adipisicing eu
-                  reprehenderit enim.
-                </p>
-              </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  Is free will real or just an illusion?
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <p>
-                  In ad velit in ex nostrud dolore cupidatat consectetur
-                  ea in ut nostrud velit in irure cillum tempor laboris
-                  sed adipisicing eu esse duis nulla non.
-                </p>
-              </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  Is free will real or just an illusion?
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <p>
-                  In ad velit in ex nostrud dolore cupidatat consectetur
-                  ea in ut nostrud velit in irure cillum tempor laboris
-                  sed adipisicing eu esse duis nulla non.
-                </p>
-              </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>
-                  Is free will real or just an illusion?
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <p>
-                  In ad velit in ex nostrud dolore cupidatat consectetur
-                  ea in ut nostrud velit in irure cillum tempor laboris
-                  sed adipisicing eu esse duis nulla non.
-                </p>
-              </AccordionItemPanel>
-            </AccordionItem>
-          </Accordion> */}
-          <div className="row mt-3">
-            <div className="col-md-5 position-relative d-flex align-items-center p-0">
-              <div className="position-absolute p-0" style={{ right: '-5vw', zIndex: '1', cursor: 'pointer' }}>
-                <ul className="list-group">
-                  {
-                    FAQs.map((faq, index) =>
-                      <li key={index} onClick={() => setCurrentQuestion(faq)} className={`list-group-item ${currentQuestion === faq ? "question-active" : "question"}`}>
-                        <div className="d-flex justify-content-between">
-                          {/* <img src={bigBullet} alt="" /> */}
-                          <div className={`${currentQuestion === faq ? "bullet-active" : "bullet"}`}></div>
-                          <span className='ml-2 mr-4'>{faq.Q}</span>
-                        </div>
-                        <img src={rightCaret} alt="" />
-                      </li>
-                    )
-                  }
-                </ul>
+          <div className="d-block d-lg-none">
+            <Accordion>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    What harsh truths do you prefer to ignore?
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <p>
+                    Exercitation in fugiat est ut ad ea cupidatat ut in
+                    cupidatat occaecat ut occaecat consequat est minim minim
+                    esse tempor laborum consequat esse adipisicing eu
+                    reprehenderit enim.
+                  </p>
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Is free will real or just an illusion?
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <p>
+                    In ad velit in ex nostrud dolore cupidatat consectetur
+                    ea in ut nostrud velit in irure cillum tempor laboris
+                    sed adipisicing eu esse duis nulla non.
+                  </p>
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Is free will real or just an illusion?
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <p>
+                    In ad velit in ex nostrud dolore cupidatat consectetur
+                    ea in ut nostrud velit in irure cillum tempor laboris
+                    sed adipisicing eu esse duis nulla non.
+                  </p>
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Is free will real or just an illusion?
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <p>
+                    In ad velit in ex nostrud dolore cupidatat consectetur
+                    ea in ut nostrud velit in irure cillum tempor laboris
+                    sed adipisicing eu esse duis nulla non.
+                  </p>
+                </AccordionItemPanel>
+              </AccordionItem>
+            </Accordion>
+          </div>
+          <div className="mt-3 d-none d-lg-block">
+            <div className="row">
+              <div className="col-md-5 position-relative d-flex align-items-center p-0">
+                {/* <div className="questions position-absolute p-0" style={{ right: '-5vw', zIndex: '1', cursor: 'pointer' }}> */}
+                <div className="questions p-0">
+                  <ul className="list-group">
+                    {
+                      FAQs.map((faq, index) =>
+                        <li key={index} onClick={() => setCurrentQuestion(faq)} className={`list-group-item ${currentQuestion === faq ? "question-active" : "question"}`}>
+                          <div className="d-flex justify-content-between">
+                            {/* <img src={bigBullet} alt="" /> */}
+                            <div className={`${currentQuestion === faq ? "bullet-active" : "bullet"}`}></div>
+                            <span className='ml-2 mr-4'>{faq.Q}</span>
+                          </div>
+                          <img src={rightCaret} alt="" />
+                        </li>
+                      )
+                    }
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className={`col-md-7 answer`}>
-              {
-                currentQuestion &&
-                <>
-                  <h2>{currentQuestion.Q}</h2>
-                  <p>{currentQuestion.A}</p>
-                </>
-              }
+              <div className={`col-md-7 answer`}>
+                {
+                  currentQuestion &&
+                  <>
+                    <h2>{currentQuestion.Q}</h2>
+                    <p>{currentQuestion.A}</p>
+                  </>
+                }
+              </div>
             </div>
           </div>
         </div>

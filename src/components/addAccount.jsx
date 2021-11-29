@@ -34,14 +34,6 @@ const AddAccount = ({showModal, ...props}) => {
                         </div>
                     </div>
 
-                    {/* <button type="submit" className="btn btn-primary modal_btn">Sign In</button> */}
-                    {/* <div className="w-100 text-center mt-5">
-                        <button type="submit" className="btn mb-2" style={{ background: '#172755', borderRadius: '2px', color: 'white', fontSize: '14px' }}>Add Beneficiary</button>
-                        <p className="" style={{ color: '#FB4039', fontSize: '12px', fontWeight: '600' }}>
-                        <span aria-hidden="true">&times;</span>
-                        Delete Beneficiary
-                    </p>
-                    </div> */}
                 </form>
 
             </div>
