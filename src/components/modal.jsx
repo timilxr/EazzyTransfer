@@ -4,7 +4,7 @@ import aus from '../imgs/Rectangle 190.png';
 import MyAccount from './myAccount';
 import NewBeneficiary from './new_beneficiary';
 import Beneficiary from './beneficiary';
-import SendMoney from './sendMoney';
+import SendMoney from './sendMoneyModal';
 import AddAccount from './addAccount';
 import AccountDetails from './accountDetails';
 import AccountDetails2 from './accountDetails2';

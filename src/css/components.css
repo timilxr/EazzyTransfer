@@ -18,6 +18,80 @@ body{
 .sidebar_title_container{
   padding: 37px;
 }
+.convert-currency-desc{
+font-family: Nunito;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: center;
+color: #4B506D;
+}
+.convert-currency-value{
+  font-family: Nunito;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: center;
+color: rgb(218, 105, 0);
+}
+.convert-currency-amount{
+  font-family: Nunito;
+font-size: 19px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: 0.02em;
+text-align: left;
+color: #013055;
+}
+.send-money-currency-label{
+  font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+color: #013055;
+}
+.conversion{
+  font-family: Nunito;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+color: #24346A;
+background: #FFFFFF;
+border: 0.5px solid #8794BA;
+border-radius: 16px;
+position:absolute;
+top: 26.46%;
+left: 39%;
+z-index: 4px;
+padding: 3px 5px;
+}
+.currency-conversion{
+  font-family: Nunito;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+color: #24346A;
+background: #FFFFFF;
+border: 0.5px solid #8794BA;
+border-radius: 16px;
+position:absolute;
+top: 20.46%;
+left: 37.6%;
+z-index: 4px;
+padding: 3px 5px;
+}
 .page_info{
   width: auto;
 }
@@ -258,6 +332,11 @@ border-radius: 1px;
     color: rgba(9, 30, 69, 0.8);
   }
 
+  .send-money-container{
+    width: 60%;
+    min-height: 400px;
+  }
+
   .question{
       display: flex;
       justify-content: space-between;
@@ -473,6 +552,16 @@ padding: 5px 10px;
   .preferred-document{
     width: 100%;
   }
+  .send-money-container{
+    width: auto;
+    min-height: 400px;
+  }
+  .conversion{
+left: 28%;
+  }
+  .currency-conversion{
+    left: 28%;
+  }
   .add_ben_btn{
     display: flex;
   width: auto;
@@ -505,16 +594,39 @@ letter-spacing: 0.5px;
   width: 100%;
 }
 }
+@media screen and (max-width: 780px){
+  .conversion{
+    left: 25%;
+    }
+    .currency-conversion{
+       left: 30%;
+    }
+    .page_info{
+      /* width: 25%; */
+      /* justify-content: center; */
+      /* background-color: chartreuse; */
+    }
+  }
 
 @media screen and (max-width: 680px){
   .page_info{
     width: 70%;
+    justify-content: center;
   }
   .add_ben_btn{
     width: auto;
   }
+  .conversion{
+    left: 30%;
+    }
+    .currency-conversion{
+      left: 30%;
+    }
   .sidebar_btn_active{
     padding: 13px;
+}
+.verify_container{
+  width: 80%;
 }
 .sidebar_title_container{
   padding: 15px 27px;
