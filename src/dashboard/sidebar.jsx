@@ -57,7 +57,7 @@ const Sidebar = ({ showModal, ...props }) => {
                     <div href="#">Link 3</div>
                 </div>
                 <hr className="sidebar_hr" /> */}
-                <Link to="settings" className="text-decoration-none">
+                <Link to="/settings" className="text-decoration-none">
                     <div className={`row ${currentPath !== "settings" ? 'sidebar_btn': 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>
                         <i className="fas fa-user-cog  sidebar_icon"></i>
                         <h6 className="sidebar_btn_text">Settings</h6>

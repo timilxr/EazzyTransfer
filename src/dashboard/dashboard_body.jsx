@@ -6,6 +6,7 @@ import TransactionHistory from "./transaction_history";
 import Accounts from "./accounts";
 import Modal from '../components/modal';
 import Beneficiaries from "./beneficiaries";
+// import Settings from "./settings";
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -15,7 +16,7 @@ const DashboardBody = () => {
     return (
         <React.Fragment>
             <div className="row dashboard_row p-0" style={{backgroundColor: '#F7F8FC', minHeight: '100vh'}}>
-                <div className="col-sm-3 col-md-2 sidebar border-0 m-0 p-0">
+                <div className="sidebar col-sm-3 col-md-2 border-0 m-0 p-0">
                     <Sidebar showModal={setShowModal} />
                 </div>
                 <div className="col-12 col-sm-9 col-md-10 p-0 m-0">
@@ -31,6 +32,7 @@ const DashboardBody = () => {
                         <Route path="transaction-history" element={<TransactionHistory />} />
                         <Route path="accounts" element={<Accounts showModal={setShowModal} />} />
                         <Route path="beneficiaries" element={<Beneficiaries showModal={setShowModal} />} />
+                        {/* <Route path="settings" element={<Settings />} /> */}
                     </Routes>
 
                 </div>

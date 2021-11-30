@@ -9,6 +9,9 @@ import TermsandConditions from "./components/terms_and_conditions";
 import PrivacyPolicy from "./components/privacy_policy";
 import HelpDesk from "./components/helpdesk";
 import UpdateProfile from "./components/updateProfile";
+import SendMoney from "./views/sendMoney";
+import ConvertCurrency from "./views/convertCurrency";
+import Settings from './views/settings';
 // import DashboardContent from "./dashboard/dashboard_content";
 
 import './css/components.css';
@@ -37,6 +40,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="dashboard/*" element={<DashboardBody />} />
+          <Route path="send-money" element={<SendMoney />} />
+          <Route path="convert-currency" element={<ConvertCurrency />} />
           <Route path="sign-up" element={<SignUp />} />
           <Route path="update-profile" element={<UpdateProfile />} />
           {/* <Route path="currency" element={<DropdownSearchSelection />} /> */}
@@ -44,6 +49,7 @@ function App() {
           <Route path="terms-and-conditions" element={<TermsandConditions />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="help-desk" element={<HelpDesk />} />
+          <Route path="settings" element={<Settings />} />
         </Routes>
       {/* </BrowserRouter> */}
     </div>
