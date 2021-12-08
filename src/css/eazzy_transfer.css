@@ -53,14 +53,17 @@
 /*row-one*/
 .row_one{
     height: auto;
-    background: rgb(95,141,181);
-    background: linear-gradient(0deg, rgba(95,141,181,1) 21%,  rgba(245,246,248,1) 87%);
+    /* background: rgb(95,141,181); */
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 150px;
     padding-bottom: 150px;
     margin-left: 0 !important;
     margin-right: 0 !important;
+}
+.top-section{
+    background: linear-gradient(0deg, rgba(95,141,181,1) 21%,  rgba(245,246,248,1) 87%);
+
 }
 .row_one_col_one{
     /* max-width: 45% !important;
@@ -129,9 +132,10 @@
     height: 80% !important;
 }
 .currency_exchange_row{
-    border-left: 1px solid #0a4a82;
+    border-left: 2px solid #0a4a82;
     height: 40px;
     margin: 18px;
+    margin-left: 23px;
     padding: 12px;
     display: flex;
 }
@@ -202,13 +206,14 @@
     height: 60px;
     width: 230px;
     border-radius: 0 !important;
-    background-color: #0a4a82 !important;
+    background-color: #0898A0 !important;
     padding: 1.0rem .75rem !important;
     /* margin-left: 25%; */
 }
 /*row two*/
 .row_two{
     padding: 200px;
+    padding-bottom: 80px;
     margin-left: 0 !important;
     margin-right: 0 !important;
     background-color: #fdfdfd;
@@ -254,7 +259,7 @@
     background-color: #fff;
     padding-top: 150px;
     padding-left: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     padding-right: 100px;
     height: auto;
     margin-left: 0 !important;
@@ -276,8 +281,8 @@
 
 } */
 .sub_row_three{
-    margin-top: 20px;
-    padding-right: 200px;
+    margin-top: 0px;
+    padding-right: 100px;
 }
 .numbers{
     position: absolute;
@@ -310,6 +315,7 @@ div.to_do_list > span:hover{
 .to_do_subtitle{
     margin-left: 70px;
     color: #545A65;
+    text-align: justify;
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -350,13 +356,13 @@ div.to_do_list > span:hover{
     margin-left: 3px;
 }
 .row_four_col_one{
-    /* border: 0.5px solid #0a4a82; */
+    border: 0.5px dotted #0a4a82;
     height: 60px;
     /* width: 200px; */
     margin-right: 25px;
 }
 .row_four_col_two{
-    /* border: 0.5px solid #0a4a82; */
+    border: 0.5px dotted #0a4a82;
     height: 60px;
     /* width: 200px; */
     margin-left: 25px;
@@ -403,13 +409,13 @@ div.to_do_list > span:hover{
     background-color: #091E45;
     margin-left: 0!important;
     margin-right: 0!important;
-    padding-left: 200px;
-    padding-right: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
     padding-top: 150px;
     padding-bottom: 200px;
 }
 .row_five_col{
-    padding-right: 200px;
+    padding-right: 130px;
 }
 .row_five_title{
     font-size: 32px;
@@ -438,8 +444,8 @@ div.to_do_list > span:hover{
 /*row six*/
 .row_six{
     background-color: #fff;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
     padding-top: 200px;
     padding-bottom: 200px;
     margin-left: 0 !important;
@@ -718,7 +724,8 @@ div.to_do_list > span:hover{
     font-size: 16px;
 }
 .proceed_btn{
-   background-color:#36B37E !important; 
+   background-color:#0898A0 !important; 
+   color: white;
    margin-top: 70px;
 }
 .col_two_subscript{
@@ -810,8 +817,9 @@ div.to_do_list > span:hover{
 }
 .send_cash_btn{
     width: -webkit-fill-available;
-    background-color: #18C4FF !important;
-    border: #18C4FF !important;
+    background-color:  #0898A0 !important;
+    border: #0898A0 !important;
+    color: white;
     /* border-radius: 0 !important; */
 }
 .sidebar_btn{
@@ -1344,6 +1352,30 @@ color: #252733;
 .whatsapp_icon{
     color:  #25d366;
 }
+/*------------------------------------------------business details------------------------------------------------------*/
+
+.business_details_title{
+    font-family: 'Poppins', sans-serif ;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #545A65;
+}
+.business_details_subtitle{
+    font-family: 'Poppins' sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #091E45;
+}
+
+
 
 
 

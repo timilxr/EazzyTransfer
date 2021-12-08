@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel, } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
@@ -89,6 +89,81 @@ const CurrencyOptions = [
   },
 ];
 
+const CurrencyCountryOptions = [
+  {
+    img: aus,
+    text: "Nigeria Naira",
+    code: 'NGN'
+  },
+  {
+    img: aus,
+    text: "American Dollars",
+    code: 'USD'
+  },
+  {
+    img: aus,
+    text: "Afghanistan Afghanis",
+    code: 'GBP'
+  },
+  {
+    img: aus,
+    text: "Albania Leke",
+    code: 'CAD'
+  },
+  {
+    img: aus,
+    text: "Algeria Dinars",
+    code: 'ZAR'
+  },
+  {
+    img: aus,
+    text: "Argentina Pesos",
+    code: 'EUR'
+  },
+  {
+    img: aus,
+    text: "Austria Schillings",
+    code: 'KES'
+  },
+];
+
+const SelectCountryCurrency = ({ options, selected, setValue, name, ...props }) => {
+  const [selectedOption, setSelectedOption] = useState(selected ? selected : options[0]);
+
+  useEffect(() => {
+    if (setValue) {
+      setValue({ [name]: selectedOption })
+    }
+  }, [selectedOption])
+
+  return (
+    <>
+      <div className="dropdown modal_inputs p-0 h-100 w-100 border-0">
+        <a className="btn dropdown-toggle p-0 px-1 h-100 d-flex justify-content-between align-items-center" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div className="w-75 text-left p-2" href="#">
+            <h3 className="m-0" style={{ fontSize: '22px', fontWeight: 'bold' }}>{selectedOption.code}</h3>
+            <p className="m-0" style={{ fontSize: '13px', fontWeight: 'bold' }}>{selectedOption.text}</p>
+          </div>
+          <img src={selectedOption.img} className="" width="" alt="" />
+        </a>
+
+        <div className="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
+          {options && options.map((option, index) =>
+            <div key={index} onClick={() => setSelectedOption(option)} style={{ cursor: 'pointer' }} className="dropdown-item d-flex justify-content-between p-1 py-2" href="#">
+              <div className="text-left p-2" href="#">
+                <h3 className="m-0" style={{ fontSize: '22px', fontWeight: 'bold' }}>{option.code}</h3>
+                <p className="m-0" style={{ fontSize: '13px', fontWeight: 'bold' }}>{option.text}</p>
+              </div>
+              <img src={option.img} className="" width="65px" alt="" />
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  )
+}
+
+
 const LandingPage = () => {
   const [currentQuestion, setCurrentQuestion] = useState(null);
 
@@ -96,119 +171,100 @@ const LandingPage = () => {
   return (
     <div className="homepage">
       <React.Fragment>
-        <header className="menu_header p-3" id="myHeader">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light nav-header">
-            {/* <div className="container-fluid"> */}
-            <div className="image_logo">
-              <img src={logo} alt="logo" className="eazzy_logo" />
-            </div>
-            <button className="navbar-toggler header-btn " type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse header_nav" id="navbarNavDropdown">
-              <div className="menu_list">
-                <ul className="navbar-nav header_ul ">
-                  <li className="nav-item">
-                    <Link className="nav-link" to="product">Product</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="currency">Currency</Link>
-                  </li>
-                  {/* <li className="nav-item">
+        <div className="top-section">
+          <header className="menu_header p-3" id="myHeader">
+            <nav className="navbar navbar-expand-lg nav-header">
+              {/* <div className="container-fluid"> */}
+              <div className="image_logo">
+                <img src={logo} alt="logo" className="eazzy_logo" />
+              </div>
+              <button className="navbar-toggler header-btn " type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse header_nav" id="navbarNavDropdown">
+                <div className="menu_list">
+                  <ul className="navbar-nav header_ul ">
+                    <li className="nav-item">
+                      <Link className="nav-link" to="product">Product</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="currency">Currency</Link>
+                    </li>
+                    {/* <li className="nav-item">
     <Link className="nav-link" to="/rate">Rate</Link>
   </li> */}
-                  <li className="nav-item">
-                    <Link className="nav-link" to="support">Support</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link small_screen_sign" to="sign-in">Sign In</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link small_screen_sign" to="sign-up">Sign Up</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="sign_input_div">
-              <Link to="sign-in" className="btn sign_in sign_in_btn">Log In</Link>
-              <Link to="sign-up" className="btn sign_in_up sign_up_btn">Join Now</Link>
-            </div>
-          </nav>
-        </header>
-
-
-        <div className="row row_one">
-          <div className="row_one_col_one col-md-5">
-            <h1 className="row_one_title"> Cheaper, Faster money speed wave. </h1>
-            <ul className="row_one_list">
-              <li className="row_one_sublist">Cheaper than all other financial services</li>
-              <li className="row_one_sublist">Send money overseas at better exchange rates now</li>
-            </ul>
-            <button type="button" className="btn btn-primary create_acc_btn">Get a free account</button>
-            {/* <div className="sub_row_one">
-  <h1 className="country_flag_row_title">Transaction to 120 countries</h1>
-  <ul className="country_flag_row">
-    <li><div className="currency-flag currency-flag-usd">
-      <img src={Rectangle} alt="" className="row_one_img"/>
-      </div></li>
-    <li><div className="currency-flag currency-flag-usd">
-      <img src={Rectangle} alt="" className="row_one_img"/>
-      </div></li>
-      <li><div className="currency-flag currency-flag-usd">
-      <img src={Rectangle} alt="" className="row_one_img"/>
-      </div></li>
-      <li><div className="currency-flag currency-flag-usd">
-      <img src={Rectangle} alt="" className="row_one_img"/>
-      </div></li>
-      <li><div className="currency-flag currency-flag-usd">
-      <img src={Rectangle} alt="" className="row_one_img"/>
-      </div></li>
-      <li><div className="currency-flag currency-flag-usd">
-      <i className="fas fa-chevron-right fa-2x" role="button" style={{marginTop: "2px", color: "#979797"}}></i>
-      </div></li>
-  </ul>
-</div> */}
-          </div>
-          <div className="col-md-3 mt-4 mt-md-0"></div>
-          <div className="row_one_col_two col-md-4 mx-auto p-0">
-            <div className="currency_one_div row d-flex align-items-center m-0">
-              <div className="col-md-6 col-6 text-center">
-                <span className="send_currency m-0 p-0">You send</span>
-                <div>
-                  <input type="number" className="currency_input" />
+                    <li className="nav-item">
+                      <Link className="nav-link" to="support">Support</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link small_screen_sign" to="sign-in">Sign In</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link small_screen_sign" to="sign-up">Sign Up</Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
-                <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
-                  <div className="form-group bg-white h-100 w-100 rounded m-0">
-                    <SelectCurrency name="send" options={CurrencyOptions} />
+              <div className="sign_input_div">
+                <Link to="sign-in" className="btn sign_in sign_in_btn">Log In</Link>
+                <Link to="sign-up" className="btn sign_in_up sign_up_btn">Join Now</Link>
+              </div>
+            </nav>
+          </header>
+
+
+          <div className="row row_one">
+            <div className="row_one_col_one col-md-5">
+              <h1 className="row_one_title"> Cheaper, Faster money speed wave. </h1>
+              <ul className="row_one_list">
+                <li className="row_one_sublist">Cheaper than all other financial services</li>
+                <li className="row_one_sublist">Send money overseas at better exchange rates now</li>
+              </ul>
+              <button type="button" className="btn text-white create_acc_btn">Get a free account</button>
+            </div>
+            <div className="col-md-3 mt-4 mt-md-0"></div>
+            <div className="row_one_col_two col-md-4 mx-auto p-0">
+              <div className="currency_one_div row d-flex align-items-center m-0">
+                <div className="col-md-6 col-6 text-center">
+                  <span className="send_currency m-0 p-0">You send</span>
+                  <div>
+                    <input type="number" className="currency_input" />
+                  </div>
+                </div>
+                <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
+                  <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
+                    <div className="form-group bg-white h-100 w-100 rounded m-0">
+                      <SelectCurrency name="send" options={CurrencyOptions} />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="currency_exchange_row">
-              <h6 className="input_currency">1 EUR</h6><span className="equal_to_sign">=</span><h6 className="output_currency">0.8797 GBP</h6>
-            </div>
-            <div className="currency_two_div row d-flex align-items-center m-0">
-              <div className="col-md-6 col-6 text-center">
-                <span className="recieve_currency">Recipient receives</span>
-                <div>
-                  <input type="number" className="currency_input" />
-                </div>
+              <div className="currency_exchange_row">
+                <h6 className="input_currency">1 EUR</h6><span className="equal_to_sign">=</span><h6 className="output_currency">0.8797 GBP</h6>
               </div>
-              <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
-                <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
-                  <div className="form-group bg-white h-100 w-100 rounded m-0">
-                    <SelectCurrency name="recieve" options={CurrencyOptions} />
+              <div className="currency_two_div row d-flex align-items-center m-0">
+                <div className="col-md-6 col-6 text-center">
+                  <span className="recieve_currency">Recipient receives</span>
+                  <div>
+                    <input type="number" className="currency_input" />
+                  </div>
+                </div>
+                <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
+                  <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
+                    <div className="form-group bg-white h-100 w-100 rounded m-0">
+                      <SelectCurrency name="recieve" options={CurrencyOptions} />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <h6 className="row_one_col_two_subscript">Recipent gets <span className="currency_amount">£ 3,200</span> more when compared to regular traditional banks</h6>
+              <h6 className="row_one_col_two_subscript">Recipent gets <span className="currency_amount">£ 3,200</span> more when compared to regular traditional banks</h6>
 
+            </div>
           </div>
+
         </div>
+
         <div className="row row_two">
           <div className="col-md-5 m-auto">
             <h1 className="row_two_title">Why Choose Us</h1>
@@ -285,6 +341,7 @@ const LandingPage = () => {
             <img src={RowThreeImg} alt="" className="row_three_img" />
           </div>
         </div>
+
         <div className="row row_four">
           <div className="col-md-5">
             <img src={wallet} alt="wallet_icon" />
@@ -298,38 +355,22 @@ const LandingPage = () => {
             <div>
               <div className="row row_four_sub">
                 <div className="col-md-5 row_four_col_one">
-                  <select name="currencies" className="flaglist" style={{ height: "100%", width: "100%" }}>
-                    {/* <option selected value="">Select currency</option> */}
-                    <option value="Australia Dollars - AUD"> NGN</option>
-                    <option value="America (United States) Dollars - USD">
-                      <img src={usd} alt="" className="currency_flag" />USD</option>
-                    <option value="Afghanistan Afghanis - AFN">GBP</option>
-                    <option value="Albania Leke - ALL"> CAD</option>
-                    <option value="Algeria Dinars - DZD"> ZAR</option>
-                    <option value="Argentina Pesos - ARS">EUR</option>
-                    <option value="Austria Schillings - ATS"> KES</option>
-                  </select>
+                  <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[1]} />
                 </div>
                 <i className="fas fa-arrow-right fa-2x"></i>
                 <div className="col-md-5  row_four_col_two">
-                  <select name="currencies" className="flaglist" style={{ height: "100%", width: "100%" }}>
-                    <option value="America (United States) Dollars - USD">
-                      <img src={usd} alt="" className="currency_flag" />USD</option>
-                    <option value="Australia Dollars - AUD"> NGN</option>
-                    <option value="Afghanistan Afghanis - AFN">GBP</option>
-                    <option value="Albania Leke - ALL"> CAD</option>
-                    <option value="Algeria Dinars - DZD"> ZAR</option>
-                    <option value="Argentina Pesos - ARS">EUR</option>
-                    <option value="Austria Schillings - ATS"> KES</option>
-                  </select>
+                  <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[0]} />
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-12">
                   <div className="input-group">
-                    <input type="text" className="form-control" aria-label="..." />
+                    <div className="form-control" style={{borderRadius: '0'}}>
+                      <p className="ml-3 font-weight-bold">13 hours delivery time</p>
+                    </div>
+                    {/* <input type="text" className="form-control" aria-label="..." /> */}
                     <div className="input-group-btn">
-                      <button type="button" className="btn btn-default dropdown-toggle row_four_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal Time <span className="caret"></span></button>
+                      <button type="button" className="btn btn-default dropdown-toggle row_four_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{borderRadius: '0'}}>Normal Time <span className="caret"></span></button>
                       <ul className="dropdown-menu dropdown-menu-right row_four_dropdown">
                         <li><a href="#">13 hours delivery</a></li>
                         <li><a href="#">Another action</a></li>
@@ -344,6 +385,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
+
         <div className="row row_nine">
           <div className="col-md-6 row_nine_col_one">
             <h4 className="row_nine_title">What we do</h4>
@@ -403,6 +445,7 @@ const LandingPage = () => {
                 </div>
               </div> */}
         </div>
+
         <div className="row row_five">
           <div className="col-md-7 row_five_col">
             <h1 className="row_five_title">Money is safe and secure.</h1>
@@ -414,9 +457,11 @@ const LandingPage = () => {
             <img src={security} alt="" style={{ display: "block", margin: "auto" }} />
           </div>
         </div>
+
+
         <div className="row row_six">
           <div className="col-md-5">
-            <h1 className="row_six_title">Your interaction in all  experience </h1>
+            <h1 className="row_six_title">Your interaction in all experience </h1>
             <h6 className="row_six_subtitle">Depending on the country, moeny transfer has diffrent routes it goes through relating to diffrent countries. </h6>
             <p className="row_six_subtitle">Depending on the country, moeny transfer has diffrent routes it goes through relating to diffrent countries. </p>
           </div>

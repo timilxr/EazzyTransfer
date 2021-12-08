@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import photo from '../imgs/photo preview.svg';
+import cam from '../imgs/overlayimage.svg';
 
 const SelfieCamera = ({ proceed, ...props }) => {
     const [image, setImage] = useState(null);
     return (
         <>
             {!image ?
-                <div className="verify_container mx-auto shadow rounded px-md-5 pb-5 camera">
-                    <div className="text-center">
+                <div className="verify_container mx-auto rounded pb-5 position-relative">
+                    {/* <div className="mx-auto"> */}
+                        <img src={cam} alt="" className="img-fluid d-block mx-auto"></img>
+                    {/* </div> */}
+                    <div className="text-center position-absolute" style={{top: '470px', left: '36%'}}>
                         <p className="image-instruction mb-3 text-white" style={{ fontSize: '14px', lineHeight: '20px' }}>Keep your face within the oval</p>
-                        <button onClick={() => setImage(photo)} className="btn btn-lg" style={{ background: '#0898A0', borderRadius: '2px', color: 'white', width: '40%', fontSize: '14px' }}>Take selfie</button>
+                        <button onClick={() => setImage(photo)} className="btn btn-lg w-100" style={{ background: '#0898A0', borderRadius: '2px', color: 'white', width: '40%', fontSize: '14px' }}>Take selfie</button>
                     </div>
                 </div>
                 :

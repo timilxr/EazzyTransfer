@@ -20,6 +20,26 @@ const Beneficiaries = ({ showModal, ...props }) => {
             accountType: 'CAD Account',
             flag: aus
         },
+        {
+            name: 'Damilola Bamse',
+            accountType: 'USD Account',
+            flag: aus
+        },
+        {
+            name: 'Taiwo Cresent',
+            accountType: 'Primary GBP Account',
+            flag: aus
+        },
+        {
+            name: 'Damilola Bamse',
+            accountType: 'NGN Account',
+            flag: aus
+        },
+        {
+            name: 'Taiwo Cresent',
+            accountType: 'CAD Account',
+            flag: aus
+        }
     ]
 
     return (

@@ -13,10 +13,10 @@ const Signup = () => {
         <React.Fragment>
             <div className="sign_up">
                 <div className="row sign_up_page">
-                    <div className="col-sm-4 sign_up_col_one p-0">
+                    <div className="col-sm-4 col-md-5 sign_up_col_one p-0">
                         <SignUpSideBar />
                     </div>
-                    <div className="col-sm-8 sign_up_col_two">
+                    <div className="col-sm-8 col-md-7 sign_up_col_two">
                         <button type="button" className="btn btn-link homepage_link"><i className="fas fa-chevron-left"></i>Back</button>
                         {currentView === 1 && <SignupOne proceed={() => setCurrentView(2)} />}
                         {currentView === 2 && <SignupTwo proceed={() => setCurrentView(3)} />}

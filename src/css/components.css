@@ -17,6 +17,9 @@ body{
 }
 .sidebar_title_container{
   padding: 37px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .convert-currency-desc{
 font-family: Nunito;
@@ -281,7 +284,7 @@ border: 1px solid #0ACF83;
 }
 .camera{
   background: url(../imgs/overlayimage.svg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 500px;
@@ -406,10 +409,11 @@ color: rgba(9, 30, 69, 0.8);
     width: 200px;
     align-items: center;
     justify-content: center;
-    background-color: #18C4FF !important;
-    border: #18C4FF !important;
+    background-color: #0898A0 !important;
+    border: #0898A0 !important;
     border-radius: 3px !important;
-    font-family: Mulish;
+    font-family: 'Mulish';
+    color: white;
 font-size: 14px;
 font-style: normal;
 font-weight: 700;
@@ -541,6 +545,13 @@ padding: 5px 10px;
   background-color: #dbdfec;
 }
 
+
+/* business details */
+.card-container{
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
 @media screen and (max-width: 380px){
   .questions{
     position: relative !important;
@@ -592,6 +603,10 @@ letter-spacing: 0.5px;
 }
 .verify_container{
   width: 100%;
+}
+.card-container{
+  padding: 10px;
+  margin-bottom: 50px;
 }
 }
 @media screen and (max-width: 780px){

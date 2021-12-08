@@ -22,15 +22,16 @@ const SignupOne = ({ proceed, ...props }) => {
                             <div className="input-group-prepend">
                                 <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+234</button>
                                 <div className="dropdown-menu">
-                                    <a className="dropdown-item" href="#">Action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
+                                    <a className="dropdown-item" href="#">+555</a>
+                                    <a className="dropdown-item" href="#">+123</a>
                                     <a className="dropdown-item" href="#">Something else here</a>
                                 </div>
                             </div>
                             <input type="text" className="form-control" aria-label="Text input with dropdown button" />
                         </div>
                     </div>
-                    <button type="button" onClick={() => proceed()} className="btn btn-primary btn-lg btn-block proceed_btn">Proceed</button>
+                    <button type="button" onClick={() => proceed()} className="btn btn-lg btn-block proceed_btn text-white" style={{backgroundColor: '#0898A0'}}>Proceed</button>
+                    <p className="text-primary text-center">I've changed my number</p>
                 </div>
             </div>
         </React.Fragment>

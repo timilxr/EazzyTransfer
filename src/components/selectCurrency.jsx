@@ -24,11 +24,8 @@ const SelectCurrency = ({ label, message, options, selected, setValue, name, ...
                         {options && options.map((option, index) =>
                             <div key={index} onClick={() => setSelectedOption(option) } style={{ cursor: 'pointer' }} className="dropdown-item p-1 py-2" href="#"><img src={option.img} className="modal_input_images" alt="" /> {option.text}</div>
                         )}
-                        {/* <div className="dropdown-item p-1" href="#"><img src={aus} className="modal_input_images" alt="" /> GBP</div>
-                    <div className="dropdown-item p-1" href="#"><img src={aus} className="modal_input_images" alt="" /> CAD</div> */}
                     </div>
                 </div>
-                {/* <input type="email" className="form-control modal_inputs" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" /> */}
         </>
     )
 }

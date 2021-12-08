@@ -12,6 +12,7 @@ import UpdateProfile from "./components/updateProfile";
 import SendMoney from "./views/sendMoney";
 import ConvertCurrency from "./views/convertCurrency";
 import Settings from './views/settings';
+import BusinessDetails from './views/business_details';
 // import DashboardContent from "./dashboard/dashboard_content";
 
 import './css/components.css';
@@ -50,6 +51,7 @@ function App() {
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="help-desk" element={<HelpDesk />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="business-details" element={<BusinessDetails />} />
         </Routes>
       {/* </BrowserRouter> */}
     </div>

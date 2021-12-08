@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from '../imgs/logoeazzytransfer.svg';
 
 
 const Sidebar = ({ showModal, ...props }) => {
@@ -13,10 +14,11 @@ const Sidebar = ({ showModal, ...props }) => {
             <div className="m-0 w-100">
                 <div className="row sidebar_title_container">
                     {/* <img src={logo} alt="" /> */}
+                    <img src={logo} alt="" className="img-fluid" width="30px" />
                     <h5 className="sidebar_title m-0">Eazzy Transfer</h5>
                 </div>
                 <div style={{ padding: "20px" }}>
-                    <button type="button" onClick={() => showModal('send money')} className="btn btn-primary send_cash_btn">Send Money</button>
+                    <button type="button" onClick={() => showModal('send money')} className="btn send_cash_btn">Send Money</button>
                 </div>
                 <Link to="accounts" className="text-decoration-none">
                     <div className={`row ${currentPath !== "accounts" ? 'sidebar_btn': 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>

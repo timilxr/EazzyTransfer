@@ -26,10 +26,25 @@ const Settings = ({ showModal, ...props }) => {
             img: envelope
         },
         {
-            main: 'Language Settings',
-            sub: 'English (UK)',
+            main: 'Change Password',
+            sub: '*****',
             img: envelope
         },
+        {
+            main: '2-step Login',
+            sub: 'Status on Sms or Voice call',
+            img: envelope
+        },
+        {
+            main: 'Api tokens',
+            sub: "You don't have any active Api tokens",
+            img: envelope
+        },
+        {
+            main: 'Webhooks',
+            sub: "You don't have any active webhooks",
+            img: envelope
+        }
     ]
     return (
         <React.Fragment>

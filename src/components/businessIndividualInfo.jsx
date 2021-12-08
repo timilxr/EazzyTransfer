@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Tick from '../imgs/tick.png';
 
-const BusinessIndividualInfo = ({ proceed, ...props }) => {
-    const [page, setPage] = useState(4);
-    const [acctType, setAcctType] = useState(null);
+const BusinessIndividualInfo = ({ proceed, initAcctType, initPage, ...props }) => {
+    const [page, setPage] = useState(initPage || 4);
+    const [acctType, setAcctType] = useState(initAcctType);
 
     return (
         <>

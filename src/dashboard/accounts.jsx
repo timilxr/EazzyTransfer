@@ -62,7 +62,7 @@ const Accounts = ({ showModal, ...props }) => {
                                 <div className="row account_card_row">
                                     <div className="col-9 col-md-9 account_card_col">
                                         <img src={currencyFlag} alt="" className="currency_flag" />
-                                        <h6 className="account_value mt-4 mb-1">0.00</h6>
+                                        <h6 className="account_value mt-4 mb-1">$361,665</h6>
                                         <h6 className="currency_and_state">Canadian Dollars </h6>
                                     </div>
                                     <div className="col-3 col-md-3 account_card_col">
@@ -87,19 +87,19 @@ const Accounts = ({ showModal, ...props }) => {
                                 </div>
                             </div>
                         </div>
-                        <div onClick={() => showModal('add account')} className="card account_card">
+                        <div onClick={() => showModal('add account')} className="card account_card" style={{width: '11vw'}}>
                             <div className="card-body account_card_body">
                                 <div className="row account_card_row">
                                     <div className="col-md-12">
                                         <i className="fas fa-plus-circle fa-2x"></i>
-                                        <h6 style={{ textAlign: "center" }}>Add Account</h6>
+                                        <h6 style={{ textAlign: "center", marginTop: '20px' }}>Add Account</h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="account_card d-flex align-content-center justify-content-center">
+                        <div className="account_card d-flex align-content-center justify-content-center" style={{width: '8vw'}}>
                             <button type="button" onClick={() => setShowAll(true)} className="btn btn-link see_all_btn">
-                                <span>see all</span>
+                                <span>view all</span>
                                 {/* <i className="fas fa-chevron-right"></i> */}
                             </button>
                         </div>

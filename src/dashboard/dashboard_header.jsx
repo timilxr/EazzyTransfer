@@ -15,7 +15,7 @@ const DashboardHeader = ({ showModal, header, ...props }) => {
                     {/* <div className="container-fluid"> */}
                     <div className="d-flex flex-wrap page_info mr-auto">
                         <h6 className="transaction_history text-capitalize m-0">{header ? header : (currentPath == 'transaction-history' ? 'Transaction History' : currentPath)}</h6>
-                        {currentPath === 'beneficiaries' && <button type="button" className="btn btn-primary add_ben_btn py-1 py-md-2" onClick={() => showModal('new beneficiary')}><i className="fa fa-plus mr-1" aria-hidden="true"></i> Add Beneficiary</button>}
+                        {currentPath === 'beneficiaries' && <button type="button" className="btn add_ben_btn py-1 py-md-2 ml-lg-2" onClick={() => showModal('new beneficiary')}><i className="fa fa-plus mr-1" aria-hidden="true"></i> Add Beneficiary</button>}
                         {/* <img src={logo} alt="logo" className="eazzy_logo" /> */}
                     </div>
                     <button className="navbar-toggler header-btn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
