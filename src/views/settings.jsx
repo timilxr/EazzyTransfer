@@ -50,7 +50,7 @@ const Settings = ({ showModal, ...props }) => {
         <React.Fragment>
             <div className="container-fluid p-0" style={{ background: '#F7F8FC', minHeight: '100vh' }}>
                 <div className="w-100 bg-white">
-                    <DashboardHeader header="Send Money" />
+                    <DashboardHeader header="Settings" />
                 </div>
                 <div className="p-3 mt-5 bg-white mx-3 mx-md-4">
                     <ul className="list-group">

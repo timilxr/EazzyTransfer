@@ -48,7 +48,7 @@ const Support = () => {
           <h1 className="helpdesk_title">Start, Get a response. </h1>
         </div>
         <div class="form-group" style={{ width: "75%" }}>
-          <div class="input-icons">
+          <div class="input-icons text-white">
             {/* <i class="fa fa-key icon"></i> */}
             <input type="search" class="form-control" id="search" placeholder="Send us a message" style={{ backgroundColor: "#0898A0", color: "#fff" }} />
           </div>
@@ -59,9 +59,9 @@ const Support = () => {
             <div class="card helpcard">
               <div class="card-body">
                 <div className="helpcard_body">
-                  <h5 className="helpcard_question">About EazzyTransfer</h5>
+                  <h5 className="helpcard_question">What is a multicurrency account and how does it operate?</h5>
                   <p className="helpcard_answer">
-                    Access answers to our FAQs to schedule a time to speak with a member of our team answers to our FAQs to schedule a time to speak with a member of our team
+                  Access answers to our FAQs to schedule a time to speak with a member of our team answers to our FAQs to schedule a time to speak with a member of our team
                   </p>
                 </div>
               </div>
@@ -73,9 +73,9 @@ const Support = () => {
             <div class="card helpcard">
               <div class="card-body">
                 <div className="helpcard_body">
-                  <h5 className="helpcard_question">About EazzyTransfer</h5>
-                  <p className="helpcard_answer">
-                    Access answers to our FAQs to schedule a time to speak with a member of our team answers to our FAQs to schedule a time to speak with a member of our team
+                  <h5 className="helpcard_question">Do deposits and transfer occur?</h5>
+                  <p className="helpcard_answer" style={{opacity: '0.7'}}>
+                  Access answers to our FAQs to schedule a time to speak with a member of our team...
                   </p>
                 </div>
               </div>
@@ -87,9 +87,9 @@ const Support = () => {
             <div class="card helpcard">
               <div class="card-body">
                 <div className="helpcard_body">
-                  <h5 className="helpcard_question">About EazzyTransfer</h5>
-                  <p className="helpcard_answer">
-                    Access answers to our FAQs to schedule a time to speak with a member of our team answers to our FAQs to schedule a time to speak with a member of our team
+                  <h5 className="helpcard_question">VHow long do international transfer take?</h5>
+                  <p className="helpcard_answer" style={{opacity: '0.7'}}>
+                  Access answers to our FAQs to schedule a time to speak with a member of our team...
                   </p>
                 </div>
               </div>
@@ -101,7 +101,7 @@ const Support = () => {
             <div class="card helpcard">
               <div class="card-body">
                 <div className="helpcard_body">
-                  <h5 className="helpcard_question further_question">About EazzyTransfer</h5>
+                  <h5 className="helpcard_question further_question">Have further questions?</h5>
                   <div>
                     <input type="search" id="search" name="search" placeholder="Find Articles" style={{ width: "70%" }} />
                     <input type="submit" />

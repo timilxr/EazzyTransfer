@@ -17,29 +17,36 @@ const Sidebar = ({ showModal, ...props }) => {
                     <img src={logo} alt="" className="img-fluid" width="30px" />
                     <h5 className="sidebar_title m-0">Eazzy Transfer</h5>
                 </div>
-                <div style={{ padding: "20px" }}>
-                    <button type="button" onClick={() => showModal('send money')} className="btn send_cash_btn">Send Money</button>
-                </div>
+                <Link to="/send-money" className="text-decoration-none">
+                    <div style={{ padding: "10px 20px" }}>
+                        <button type="button" className="btn send_cash_btn">Send Money</button>
+                    </div>
+                </Link>
+                <Link to="/convert-currency" className="text-decoration-none">
+                    <div style={{ padding: "10px 20px" }}>
+                        <button type="button" className="btn send_cash_btn">Convert Currency</button>
+                    </div>
+                </Link>
                 <Link to="accounts" className="text-decoration-none">
-                    <div className={`row ${currentPath !== "accounts" ? 'sidebar_btn': 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>
+                    <div className={`row ${currentPath !== "accounts" ? 'sidebar_btn' : 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>
                         <i className="fas fa-calculator sidebar_icon"></i>
                         <div>
-                        <h6 className="sidebar_btn_text">Accounts</h6>
+                            <h6 className="sidebar_btn_text">Accounts</h6>
                         </div>
                     </div>
                 </Link>
                 <Link to="transaction-history" className="text-decoration-none">
-                    <div className={`row ${currentPath !== "transaction-history" ? 'sidebar_btn': 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>
+                    <div className={`row ${currentPath !== "transaction-history" ? 'sidebar_btn' : 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>
                         <div className="">
-                        <i className="fas fa-chart-pie sidebar_icon"></i>
+                            <i className="fas fa-chart-pie sidebar_icon"></i>
                         </div>
                         <div className="">
-                        <h6 className="sidebar_btn_text">Transaction History</h6>
+                            <h6 className="sidebar_btn_text">Transaction History</h6>
                         </div>
                     </div>
                 </Link>
                 <Link to="beneficiaries" className="text-decoration-none">
-                    <div className={`row ${currentPath !== "beneficiaries" ? 'sidebar_btn': 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>
+                    <div className={`row ${currentPath !== "beneficiaries" ? 'sidebar_btn' : 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>
                         <i className="fas fa-users sidebar_icon"></i>
                         <h6 className="sidebar_btn_text">Beneficiaries</h6>
                     </div>
@@ -60,7 +67,7 @@ const Sidebar = ({ showModal, ...props }) => {
                 </div>
                 <hr className="sidebar_hr" /> */}
                 <Link to="/settings" className="text-decoration-none">
-                    <div className={`row ${currentPath !== "settings" ? 'sidebar_btn': 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>
+                    <div className={`row ${currentPath !== "settings" ? 'sidebar_btn' : 'sidebar_btn_active'} flex-nowrap`} style={{ display: "flex", alignItems: 'center' }}>
                         <i className="fas fa-user-cog  sidebar_icon"></i>
                         <h6 className="sidebar_btn_text">Settings</h6>
                     </div>

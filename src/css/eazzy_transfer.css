@@ -193,13 +193,13 @@
 }
 .row_one_col_two_subscript{
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 700;
     color: #0a4a82;
     text-align: center;
 }
 .currency_amount{
-    color: #37b8f0;
+    color: #ebc002;
 }
 .create_acc_btn{
     margin-top: 40px;

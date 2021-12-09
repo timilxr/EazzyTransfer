@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DashboardHeader from "../dashboard/dashboard_header";
 import photo from '../../src/imgs/avatar.jpg';
 
-const BusinessDetails = ({ proceed, ...props }) => {
+const BusinessDetails = ({ proceed, summary, ...props }) => {
     const [image, setImage] = useState(null);
 
 
@@ -10,8 +10,8 @@ const BusinessDetails = ({ proceed, ...props }) => {
         <React.Fragment>
             <div className="container-fluid p-0 m-0" style={{minHeight: '100vh'}}>
                 <div className="dashboard_mainbody">
-                    <DashboardHeader />
-                    <div className="" style={{ backgroundColor: '#F7F8FC', padding: "8vw" }}>
+                    {!summary && <DashboardHeader />}
+                    <div className="" style={{ backgroundColor: '#F7F8FC', padding: !summary ? "8vw" : '0' }}>
                         <div className="card card-container">
                             <div className="card-body">
                                 <div style={{ display: "flex" }}>
@@ -23,7 +23,7 @@ const BusinessDetails = ({ proceed, ...props }) => {
                                 </div>
                                 <div className="mt-5" style={{ display: "flex", borderBottom: "1px solid #e5e5e5" }}>
                                     <h5>Registered Address</h5>
-                                    <button type="button" class="btn ml-auto" style={{ border: "1px solid #0961f7", color: "#0961f7", width: "66px", marginBottom: ".5rem" }}>Edit</button>
+                                    {!summary && <button type="button" class="btn ml-auto" style={{ border: "1px solid #0961f7", color: "#0961f7", width: "66px", marginBottom: ".5rem" }}>Edit</button>}
                                 </div>
                                 <div className="row mt-5">
                                     <div className="col-6">
@@ -83,11 +83,11 @@ const BusinessDetails = ({ proceed, ...props }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="card  card-container">
+                        <div className="card card-container">
                             <div className="card-body">
                                 <div className="mt-5" style={{ display: "flex", flexWrap: 'wrap', borderBottom: "1px solid #e5e5e5" }}>
                                     <h5>Trading address</h5>
-                                    <div type="button" class="btn ml-auto" style={{ border: "1px solid #0961f7", color: "#0961f7", width: "66px", marginBottom: ".5rem" }}>Edit</div>
+                                    {!summary && <div type="button" class="btn ml-auto" style={{ border: "1px solid #0961f7", color: "#0961f7", width: "66px", marginBottom: ".5rem" }}>Edit</div>}
                                 </div>
                                 <div className="row mt-5">
                                     <div className="col-6">
@@ -116,6 +116,7 @@ const BusinessDetails = ({ proceed, ...props }) => {
                                     </div>
                                 </div>
                             </div>
+                                {summary && <button type="button" class="btn mx-auto mt-4" style={{ background: '#0898A0', borderRadius: '2px', color: 'white', fontSize: '14px', marginBottom: ".5rem" }} onClick={()=>proceed()}>Proceed</button>}
                         </div>
                     </div>
                 </div>

@@ -186,22 +186,22 @@ const LandingPage = () => {
                 <div className="menu_list">
                   <ul className="navbar-nav header_ul ">
                     <li className="nav-item">
-                      <Link className="nav-link" to="product">Product</Link>
+                      <Link className="nav-link mx-md-2" to="product" style={{color: '#4B506D'}}>Product</Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="currency">Currency</Link>
+                      <Link className="nav-link mx-md-2" to="currency" style={{color: '#4B506D'}}>Currency</Link>
                     </li>
                     {/* <li className="nav-item">
     <Link className="nav-link" to="/rate">Rate</Link>
   </li> */}
-                    <li className="nav-item">
-                      <Link className="nav-link" to="support">Support</Link>
+                    <li className="nav-item mx-md-2">
+                      <Link className="nav-link" to="support" style={{color: '#4B506D'}}>Support</Link>
+                    </li>
+                    <li className="nav-item ml-md-5">
+                      <Link className="nav-link small_screen_sign" to="sign-up">Login</Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link small_screen_sign" to="sign-in">Sign In</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link small_screen_sign" to="sign-up">Sign Up</Link>
+                      <Link className="nav-link small_screen_sign" to="sign-up">Sign In</Link>
                     </li>
                   </ul>
                 </div>
@@ -216,26 +216,27 @@ const LandingPage = () => {
 
           <div className="row row_one">
             <div className="row_one_col_one col-md-5">
-              <h1 className="row_one_title"> Cheaper, Faster money speed wave. </h1>
+              <h1 className="row_one_title">Affordable secure way to send money abroad.</h1>
               <ul className="row_one_list">
-                <li className="row_one_sublist">Cheaper than all other financial services</li>
-                <li className="row_one_sublist">Send money overseas at better exchange rates now</li>
+                <li className="row_one_sublist">Competitive rate with Zero transacton fee</li>
+                <li className="row_one_sublist">Assured security on all transactions with 6 currencies.</li>
               </ul>
               <button type="button" className="btn text-white create_acc_btn">Get a free account</button>
             </div>
             <div className="col-md-3 mt-4 mt-md-0"></div>
             <div className="row_one_col_two col-md-4 mx-auto p-0">
               <div className="currency_one_div row d-flex align-items-center m-0">
-                <div className="col-md-6 col-6 text-center">
+                <div className="col-md-6 col-6 text-white pl-md-5">
                   <span className="send_currency m-0 p-0">You send</span>
                   <div>
-                    <input type="number" className="currency_input" />
+                    <h5>$ 3224</h5>
+                    {/* <input type="number" className="currency_input" /> */}
                   </div>
                 </div>
                 <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
                   <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
                     <div className="form-group bg-white h-100 w-100 rounded m-0">
-                      <SelectCurrency name="send" options={CurrencyOptions} />
+                      <SelectCurrency name="send" options={CurrencyOptions} selected={CurrencyOptions[1]} />
                     </div>
                   </div>
                 </div>
@@ -244,16 +245,17 @@ const LandingPage = () => {
                 <h6 className="input_currency">1 EUR</h6><span className="equal_to_sign">=</span><h6 className="output_currency">0.8797 GBP</h6>
               </div>
               <div className="currency_two_div row d-flex align-items-center m-0">
-                <div className="col-md-6 col-6 text-center">
+                <div className="col-md-6 col-6 text-white pl-md-5">
                   <span className="recieve_currency">Recipient receives</span>
                   <div>
-                    <input type="number" className="currency_input" />
+                    <h5>$ 982</h5>
+                    {/* <input type="number" className="currency_input" /> */}
                   </div>
                 </div>
                 <div className="col-md-6 col-6 px-md-4 h-75 d-flex align-items-center justify-content-center">
                   <div className='h-75 w-100 d-flex align-items-end justify-content-center'>
                     <div className="form-group bg-white h-100 w-100 rounded m-0">
-                      <SelectCurrency name="recieve" options={CurrencyOptions} />
+                      <SelectCurrency name="recieve" options={CurrencyOptions} selected={CurrencyOptions[3]} />
                     </div>
                   </div>
                 </div>
@@ -364,8 +366,8 @@ const LandingPage = () => {
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <div className="input-group">
-                    <div className="form-control" style={{borderRadius: '0'}}>
+                  <div className="input-group" style={{backgroundColor: '#DDF1FF'}}>
+                    <div className="form-control bg-transparent" style={{borderRadius: '0'}}>
                       <p className="ml-3 font-weight-bold">13 hours delivery time</p>
                     </div>
                     {/* <input type="text" className="form-control" aria-label="..." /> */}
@@ -461,9 +463,9 @@ const LandingPage = () => {
 
         <div className="row row_six">
           <div className="col-md-5">
-            <h1 className="row_six_title">Your interaction in all experience </h1>
-            <h6 className="row_six_subtitle">Depending on the country, moeny transfer has diffrent routes it goes through relating to diffrent countries. </h6>
-            <p className="row_six_subtitle">Depending on the country, moeny transfer has diffrent routes it goes through relating to diffrent countries. </p>
+            <h1 className="row_six_title">Seamless interaction for all devices.</h1>
+            <h6 className="row_six_subtitle">Everyone can quickly onboard on the eazzy transfer app, with its seamless and good user experience.</h6>
+            <p className="row_six_subtitle mt-md-4">By simply connecting any of your devices to eazzytransfer.com, you get a perfect responsive app. It’s smooth and aesthetically pleasing.</p>
           </div>
           <div className="col-md-7">
             <img src={six} alt="" className="row_six_img" />
