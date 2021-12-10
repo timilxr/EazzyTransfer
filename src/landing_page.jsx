@@ -11,7 +11,10 @@ import bg from './imgs/Vector.png';
 import wallet from './imgs/image 8.png';
 import six from './imgs/image 9.png';
 import aus from './imgs/Rectangle 190.png';
-import usd from './imgs/united-states.png';
+import GBP from './imgs/GBP.svg';
+import abbas from './imgs/abbas.svg';
+import yuli from './imgs/yuli.svg';
+import ray from './imgs/ray.svg';
 import Rectangle from './imgs/Rectangle 196.png';
 import rightCaret from './imgs/rightcaret.svg';
 import bigBullet from './imgs/bigbullet.svg';
@@ -101,7 +104,7 @@ const CurrencyCountryOptions = [
     code: 'USD'
   },
   {
-    img: aus,
+    img: GBP,
     text: "Afghanistan Afghanis",
     code: 'GBP'
   },
@@ -140,7 +143,7 @@ const SelectCountryCurrency = ({ options, selected, setValue, name, ...props }) 
     <>
       <div className="dropdown modal_inputs p-0 h-100 w-100 border-0">
         <a className="btn dropdown-toggle p-0 px-1 h-100 d-flex justify-content-between align-items-center" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <div className="w-75 text-left p-2" href="#">
+          <div className="w-75 text-left p-2 text-truncate" href="#">
             <h3 className="m-0" style={{ fontSize: '22px', fontWeight: 'bold' }}>{selectedOption.code}</h3>
             <p className="m-0" style={{ fontSize: '13px', fontWeight: 'bold' }}>{selectedOption.text}</p>
           </div>
@@ -186,16 +189,16 @@ const LandingPage = () => {
                 <div className="menu_list">
                   <ul className="navbar-nav header_ul ">
                     <li className="nav-item">
-                      <Link className="nav-link mx-md-2" to="product" style={{color: '#4B506D'}}>Product</Link>
+                      <Link className="nav-link mx-md-2" to="product" style={{ color: '#4B506D' }}>Product</Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link mx-md-2" to="currency" style={{color: '#4B506D'}}>Currency</Link>
+                      <Link className="nav-link mx-md-2" to="currency" style={{ color: '#4B506D' }}>Currency</Link>
                     </li>
                     {/* <li className="nav-item">
     <Link className="nav-link" to="/rate">Rate</Link>
   </li> */}
                     <li className="nav-item mx-md-2">
-                      <Link className="nav-link" to="support" style={{color: '#4B506D'}}>Support</Link>
+                      <Link className="nav-link" to="support" style={{ color: '#4B506D' }}>Support</Link>
                     </li>
                     <li className="nav-item ml-md-5">
                       <Link className="nav-link small_screen_sign" to="sign-up">Login</Link>
@@ -269,31 +272,31 @@ const LandingPage = () => {
 
         <div className="row row_two">
           <div className="col-md-5 m-auto">
-            <h1 className="row_two_title">Why Choose Us</h1>
+            <h1 className="row_two_title">Why Eazzy Transfer?</h1>
             <h6 className="row_two_subtitle">
-              When the life too much things you need more than you have. Let Eazzy Transfer help your life to easier with smart payment system
+              Avoid the bank appointments, Send money to diffrent countries, always with a low and transparent fee. Paying your bills and subscriptions across currencies is easier than ever.
             </h6>
           </div>
           <div className="row sub_row_two">
-            <div className="col-md-4 mb-2">
+            <div className="col-md-4 mb-2 text-center">
               <img src={RowTwoImgOne} alt="" className="row_two_img" />
-              <h1 className="framework_properties">Purchase One Touch</h1>
+              <h1 className="framework_properties">Fast & Secure Onboarding</h1>
               <span className="framework_subtext">
-                Get a quick overview of all your transactions in our easy-to-use Peyme in one touch
+                Get a quick overview of all your transactions in our easy-to-use user interphase
               </span>
             </div>
-            <div className="col-md-4 mb-2">
+            <div className="col-md-4 mb-2 text-center">
               <img src={RowTwoImgTwo} alt="" className="row_two_img" />
               <h1 className="framework_properties">Free Transactions</h1>
               <span className="framework_subtext">
-                Every transactions in Eazzy Transfer is free. You don’t worry about fees. Our profits base your satisfied and ads
+                Every transactions on eazzy transfer is free of service charge.. You don’t worry about fees.
               </span>
             </div>
-            <div className="col-md-4 mb-2">
+            <div className="col-md-4 mb-2 text-center">
               <img src={RowTwoImgThree} alt="" className="row_two_img" />
-              <h1 className="framework_properties">Trusted and Secured</h1>
+              <h1 className="framework_properties">Secured with privacy</h1>
               <span className="framework_subtext">
-                None of your personcal data is ever collected or stored in our Peyme. Your history transaction just you see
+                The platform provides a private and secure channel for foreign transactions.
               </span>
             </div>
           </div>
@@ -301,7 +304,7 @@ const LandingPage = () => {
         <div className="row row_three">
           <div style={{ backgroundImage: `url(${bg})` }}></div>
           <div className="col-md-6">
-            <h1 className="row_three_title">Build a better way</h1>
+            <h1 className="row_three_title">Start Now With 3 Steps</h1>
             {/* <h6 className="row_three_subtitle">
   The most important part of the Startup Framework are the
   samples or Bootstrap themes and templates. The samples consist of a set of few pages you can.
@@ -313,28 +316,28 @@ const LandingPage = () => {
                     <i className="fas fa-user fa-2x"></i>
                   </div>
                   <div className="to_do_title">Step 1:  Create Your Account</div>
-                  <div className="to_do_subtitle">Signing up for your own Eazzy Transfer account is easy and free. Just connection with phone or gmail instandly </div>
+                  <div className="to_do_subtitle">Signing up for your own Peyme account is easy and free. Just connection with phone or gmail instandly</div>
                 </div>
                 <div className="to_do_list">
                   <div className="numbers">
                     <i className="fas fa-landmark fa-2x"></i>
                   </div>
                   <div className="to_do_title">Step 2: Upload a local currency</div>
-                  <div className="to_do_subtitle">Pay once and it’s yours forever. Use it to build as many sites as you needs. </div>
+                  <div className="to_do_subtitle">Link your preferred credit, debit or prepaid cards to your Payme account.</div>
                 </div>
                 <div className="to_do_list">
                   <div className="numbers">
                     <i className="fas fa-wallet fa-2x"></i>
                   </div>
                   <div className="to_do_title">Step 3:  Convert to choice of currency</div>
-                  <div className="to_do_subtitle">Thats all done. Now you can explore any apps, any webs that are ours partnets to transfer with them </div>
+                  <div className="to_do_subtitle">Thats all done. Now you can explore any apps, any webs that are ours partnets to transfer with them</div>
                 </div>
                 <div className="to_do_list">
                   <div className="numbers">
                     <i className="fas fa-exchange-alt fa-2x"></i>
                   </div>
                   <div className="to_do_title">  Step 4:  Make transfer</div>
-                  <div className="to_do_subtitle">Thats all done. Now you can explore any apps, any webs that are ours partnets to transfer with them </div>
+                  <div className="to_do_subtitle">Thats all done. Now you can explore any apps, any webs that are ours partnets to transfer with them</div>
                 </div>
               </div>
             </div>
@@ -349,7 +352,7 @@ const LandingPage = () => {
             <img src={wallet} alt="wallet_icon" />
           </div>
           <div className="col-md-7">
-            <h1 className="row_four_title">How long does money transfer take</h1>
+            <h1 className="row_four_title">How long do international transfers take?</h1>
             <h6 className="row_four_subtitle">
               Many of our international transfers are completed within 24 hours. Deposits and transfers of GBP can occur within one hour using faster payments with participating banks.
               <p>The maximum time a transfer would take is between 2 hours to 5 working days.</p>
@@ -357,22 +360,22 @@ const LandingPage = () => {
             <div>
               <div className="row row_four_sub">
                 <div className="col-md-5 row_four_col_one">
-                  <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[1]} />
+                  <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[2]} />
                 </div>
                 <i className="fas fa-arrow-right fa-2x"></i>
                 <div className="col-md-5  row_four_col_two">
-                  <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[0]} />
+                  <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[1]} />
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <div className="input-group" style={{backgroundColor: '#DDF1FF'}}>
-                    <div className="form-control bg-transparent" style={{borderRadius: '0'}}>
+                  <div className="input-group" style={{ backgroundColor: '#DDF1FF' }}>
+                    <div className="form-control bg-transparent" style={{ borderRadius: '0' }}>
                       <p className="ml-3 font-weight-bold">13 hours delivery time</p>
                     </div>
                     {/* <input type="text" className="form-control" aria-label="..." /> */}
                     <div className="input-group-btn">
-                      <button type="button" className="btn btn-default dropdown-toggle row_four_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{borderRadius: '0'}}>Normal Time <span className="caret"></span></button>
+                      <button type="button" className="btn btn-default dropdown-toggle row_four_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{ borderRadius: '0' }}>Normal Time <span className="caret"></span></button>
                       <ul className="dropdown-menu dropdown-menu-right row_four_dropdown">
                         <li><a href="#">13 hours delivery</a></li>
                         <li><a href="#">Another action</a></li>
@@ -508,46 +511,45 @@ const LandingPage = () => {
           </div>
           <div className="card-deck mt-4">
             <div className="card row_ten_card">
-              <div className="card-body row_ten_card_body">
+              <div className="card-body row_ten_card_body p-0">
                 <p className="card-text row_ten_card_text">
-                  Our team has been working at frispes for almost 2 months because our office still closed.
-                  During working at frispes, we feel a new experience, we can feel working with a beautiful, modern, and comfortablm.
+                  I am delighted with Eazzy transfer and will certainly recommend it as it is far more competitive than the bank rates offered and will be looking to using your services again in the very near future.
                 </p>
                 <div className="row_ten_card_div">
-                  <img src={avatar} className="row_ten_img" alt="" />
+                  <img src={abbas} className="row_ten_img" alt="" />
                   <div className="row_ten_customer_info">
-                    <h6 className="row_ten_customer_name"> Julius Berger</h6>
-                    <p className="customer_designation">Importer/Exporter</p>
+                    <h6 className="row_ten_customer_name"> Abbas Favour</h6>
+                    <p className="customer_designation">Manager Google</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="card row_ten_card">
-              <div className="card-body row_ten_card_body">
+              <div className="card-body row_ten_card_body p-0">
                 <p className="card-text row_ten_card_text">
-                  Our team has been working at frispes for almost 2 months because our office still closed.
-                  During working at frispes, we feel a new experience, we can feel working with a beautiful, modern, and comfortablm.
+                  Eazzy transfer enabled our organization to convert our USD to African currencies at a 20% better rate than anything else we could find. That meant more donor dollars going directly towards helping smallholder farmers increase their incomes. If the competitive exchange rate wasn’t enough, the process was seamless, with money going from the US to our Nigerian bank account in less than a day. I recommend Eazzy transfer to any and every business looking to make cross-border payments.
                 </p>
                 <div className="row_ten_card_div">
-                  <img src={avatar} className="row_ten_img" alt="" />
+                  <img src={ray} className="row_ten_img" alt="" />
                   <div className="row_ten_customer_info">
-                    <h6 className="row_ten_customer_name"> Julius Berger</h6>
-                    <p className="customer_designation">Importer/Exporter</p>
+                    <h6 className="row_ten_customer_name">Raymond Owolabi</h6>
+                    <p className="customer_designation">Professional manager</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="card row_ten_card">
-              <div className="card-body row_ten_card_body">
-                <p className="card-text row_ten_card_text">
-                  Our team has been working at frispes for almost 2 months because our office still closed.
-                  During working at frispes, we feel a new experience, we can feel working with a beautiful, modern, and comfortablm.
-                </p>
+              <div className="card-body row_ten_card_body p-0">
+                <div className="w-100">
+                  <p className="card-text row_ten_card_text">
+                    Just three words : Eazzy Transfer  is Awesome!
+                  </p>
+                </div>
                 <div className="row_ten_card_div">
-                  <img src={avatar} className="row_ten_img" alt="" />
+                  <img src={yuli} className="row_ten_img" alt="" />
                   <div className="row_ten_customer_info">
-                    <h6 className="row_ten_customer_name"> Julius Berger</h6>
-                    <p className="customer_designation">Importer/Exporter</p>
+                    <h6 className="row_ten_customer_name"> Yuli Ibrahim</h6>
+                    <p className="customer_designation">IOS Dev at Tokopedia</p>
                   </div>
                 </div>
               </div>
@@ -652,46 +654,65 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="row footer">
-          <div className="col-md-3">
-            <h6 className="footer_list_title">Nigeria</h6>
-            <h6 className="footer_list_subtitle">16B Aliu Animashaun Street, Lekki Phase one, Lagos Nigeria</h6>
-            <h6 className="footer_list_subtitle">+234 816 5503 335</h6>
-            <br />
-            <h6 className="footer_list_title">Kenya</h6>
-            <h6 className="footer_list_subtitle">4th Floor Cavendish Building, 14th Riverside, Nairobi Kenya</h6>
-            <h6 className="footer_list_subtitle">+254 706345362</h6>
+          <div className="">
+            <h6 className="footer_list_title">Eazzy transfer</h6>
+            <h6 className="footer_list_subtitle">Transfer</h6>
+            <h6 className="footer_list_subtitle">Convert</h6>
+            <h6 className="footer_list_subtitle">Check Rates</h6>
           </div>
-          <div className="col-md-3">
-            <ul className="footer_list">
-              <li className="footer_list_title">Products</li>
-              <li>Convert</li>
-              <li>Exchange</li>
-              <li>Transfer</li>
-              <li>Receive</li>
-              <li>Rates</li>
+          <div className="">
+            <h6 className="footer_list_title">Partnership</h6>
+            <h6 className="footer_list_subtitle">Blog</h6>
+            <h6 className="footer_list_subtitle">Support</h6>
+            <h6 className="footer_list_subtitle">Newsletter</h6>
+          </div>
+          <div className="">
+            <h5 className="footer_list_title">about</h5>
+            <ul className="footer_list p-0">
+              <li className="footer_list_subtitle">Twitter</li>
+              <li className="footer_list_subtitle">Instagram</li>
+              <li className="footer_list_subtitle">Facebook</li>
+              <li className="footer_list_subtitle">Youtube</li>
             </ul>
           </div>
-          <div className="col-md-3">
-            <ul className="footer_list">
-              <li className="footer_list_title">Quick Links</li>
-              <li>Our Story</li>
-              <li>Benefits</li>
-              <li>Team</li>
-              <li>Careers</li>
+          <div className="">
+            <h5 className="footer_list_title">Support</h5>
+            <ul className="footer_list p-0">
+              <li className="footer_list_subtitle">
+                <Link to="support" className="text-decoration-none footer_list_subtitle">My Account</Link>
+              </li>
+              <li className="footer_list_subtitle">
+                <Link to="help-desk" className="text-decoration-none footer_list_subtitle">Help & Support</Link>
+              </li>
+              <li className="footer_list_subtitle">
+                <Link to="support" className="text-decoration-none footer_list_subtitle">Contact Us</Link>
+              </li>
             </ul>
           </div>
-          <div className="col-md_3">
-            <h6 className="footer_list_title">Reach us at</h6>
-            <h6 className="footer_list_subtitle">eazzytransfer@gmail.com</h6>
-            <h6 className="footer_list_subtitle">eazzytransfer@gmail.com</h6>
-            <i className="fab fa-facebook-f"></i>
+          <div className="">
+            <h6 className="footer_list_title">Company</h6>
+            <p className="footer_list_subtitle">
+              <Link to="privacy-policy" className="text-decoration-none footer_list_subtitle">Privacy Policy</Link>
+            </p>
+            <p className="footer_list_subtitle">
+              <Link to="terms-and-conditions" className="text-decoration-none footer_list_subtitle">Terms of Service</Link>
+            </p>
+            <p className="footer_list_subtitle">
+              <Link to="terms-and-conditions" className="text-decoration-none footer_list_subtitle">Code of Conduct</Link>
+            </p>
+            {/* <i className="fab fa-facebook-f"></i>
             <i className="fab fa-twitter"></i>
-            <i className="fab fa-instagram"></i>
+            <i className="fab fa-instagram"></i> */}
           </div>
         </div>
-        <hr className="footer_hr" />
+        {/* <hr className="footer_hr" /> */}
         <div className="sub_footer_row">
-          <h6>Copyright © 2021. <a href="">Eazzy Transfer</a>. All rights reserved.</h6>
+          <div className="">
+            <img src={logo} alt="logo" className="eazzy_logo" />
+          </div>
+          <div className="text-center flex-fill">
+            <h6>Copyright © 2021. <a href="">Eazzy Transfer</a>. All rights reserved.</h6>
+          </div>
         </div>
       </React.Fragment>
     </div>

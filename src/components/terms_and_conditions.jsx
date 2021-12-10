@@ -7,7 +7,7 @@ const TermsandConditions  = () => {
     return(
             <React.Fragment>
                <div className="row documentation_row">
-                   <h1 className="documentation_title">Terms and Conditions</h1>
+                   <h1 className="documentation_title mx-auto mb-md-5">Terms and Conditions</h1>
                    <div className="col-md-12">
                     <p className="documentation_content">
                     These Terms of Use constitute a legally binding agreement made between you and Myyinvest.com.ng, whether personally or on behalf of an entity (“you”). 

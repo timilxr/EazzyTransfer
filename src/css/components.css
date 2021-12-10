@@ -544,6 +544,17 @@ padding: 5px 10px;
 .preferred-document:hover{
   background-color: #dbdfec;
 }
+.row_ten_card_text{
+  font-size: 14px;
+}
+.row_ten_card_body>p{
+  width: 100%;
+}
+.row_ten_card_body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 
 /* business details */
