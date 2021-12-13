@@ -176,12 +176,12 @@ const LandingPage = () => {
       <React.Fragment>
         <div className="top-section">
           <header className="menu_header p-3" id="myHeader">
-            <nav className="navbar navbar-expand-lg nav-header">
+            <nav className="navbar navbar-expand-lg nav-header navbar-light">
               {/* <div className="container-fluid"> */}
               <div className="image_logo">
                 <img src={logo} alt="logo" className="eazzy_logo" />
               </div>
-              <button className="navbar-toggler header-btn " type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+              <button className="navbar-toggler header-btn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -200,7 +200,7 @@ const LandingPage = () => {
                     <li className="nav-item mx-md-2">
                       <Link className="nav-link" to="support" style={{ color: '#4B506D' }}>Support</Link>
                     </li>
-                    <li className="nav-item ml-md-5">
+                    <li className="nav-item ml-lg-5">
                       <Link className="nav-link small_screen_sign" to="sign-up">Login</Link>
                     </li>
                     <li className="nav-item">
@@ -226,10 +226,10 @@ const LandingPage = () => {
               </ul>
               <button type="button" className="btn text-white create_acc_btn">Get a free account</button>
             </div>
-            <div className="col-md-3 mt-4 mt-md-0"></div>
-            <div className="row_one_col_two col-md-4 mx-auto p-0">
+            <div className="col-md-2 col-lg-3 mt-4 mt-md-0"></div>
+            <div className="row_one_col_two col-md-5 col-lg-4 mx-auto p-0">
               <div className="currency_one_div row d-flex align-items-center m-0">
-                <div className="col-md-6 col-6 text-white pl-md-5">
+                <div className="col-md-6 col-6 text-white pl-lg-5">
                   <span className="send_currency m-0 p-0">You send</span>
                   <div>
                     <h5>$ 3224</h5>
@@ -248,7 +248,7 @@ const LandingPage = () => {
                 <h6 className="input_currency">1 EUR</h6><span className="equal_to_sign">=</span><h6 className="output_currency">0.8797 GBP</h6>
               </div>
               <div className="currency_two_div row d-flex align-items-center m-0">
-                <div className="col-md-6 col-6 text-white pl-md-5">
+                <div className="col-md-6 col-6 text-white pl-lg-5">
                   <span className="recieve_currency">Recipient receives</span>
                   <div>
                     <h5>$ 982</h5>
@@ -359,23 +359,24 @@ const LandingPage = () => {
             </h6>
             <div>
               <div className="row row_four_sub">
-                <div className="col-md-5 row_four_col_one">
+                <div className="col-12 col-lg-5 row_four_col_one">
                   <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[2]} />
                 </div>
-                <i className="fas fa-arrow-right fa-2x"></i>
-                <div className="col-md-5  row_four_col_two">
+                <i className="fas fa-arrow-right fa-2x d-none d-lg-block mr-4"></i>
+                <i className="fas fa-arrow-down fa-2x mx-auto d-lg-none"></i>
+                <div className="col-12 col-lg-5 ml-0 row_four_col_two">
                   <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[1]} />
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <div className="input-group" style={{ backgroundColor: '#DDF1FF' }}>
-                    <div className="form-control bg-transparent" style={{ borderRadius: '0' }}>
-                      <p className="ml-3 font-weight-bold">13 hours delivery time</p>
+                  <div className="input-group align-items-center" style={{ backgroundColor: '#DDF1FF' }}>
+                    <div className="form-control bg-transparent" style={{ borderRadius: '0', height: 'auto' }}>
+                      <p className="ml-3 font-weight-bold text-wrap">13 hours delivery time</p>
                     </div>
                     {/* <input type="text" className="form-control" aria-label="..." /> */}
-                    <div className="input-group-btn">
-                      <button type="button" className="btn btn-default dropdown-toggle row_four_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{ borderRadius: '0' }}>Normal Time <span className="caret"></span></button>
+                    <div className="input-group-btn m-0" style={{height: '100%'}}>
+                      <button type="button" className="btn btn-default dropdown-toggle row_four_btn" style={{ borderRadius: '0', border: '0', height: '100%'}} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal Time <span className="caret"></span></button>
                       <ul className="dropdown-menu dropdown-menu-right row_four_dropdown">
                         <li><a href="#">13 hours delivery</a></li>
                         <li><a href="#">Another action</a></li>
@@ -511,7 +512,7 @@ const LandingPage = () => {
           </div>
           <div className="card-deck mt-4">
             <div className="card row_ten_card">
-              <div className="card-body row_ten_card_body p-0">
+              <div className="card-body row_ten_card_body p-lg-0">
                 <p className="card-text row_ten_card_text">
                   I am delighted with Eazzy transfer and will certainly recommend it as it is far more competitive than the bank rates offered and will be looking to using your services again in the very near future.
                 </p>
@@ -525,7 +526,7 @@ const LandingPage = () => {
               </div>
             </div>
             <div className="card row_ten_card">
-              <div className="card-body row_ten_card_body p-0">
+              <div className="card-body row_ten_card_body p-lg-0">
                 <p className="card-text row_ten_card_text">
                   Eazzy transfer enabled our organization to convert our USD to African currencies at a 20% better rate than anything else we could find. That meant more donor dollars going directly towards helping smallholder farmers increase their incomes. If the competitive exchange rate wasn’t enough, the process was seamless, with money going from the US to our Nigerian bank account in less than a day. I recommend Eazzy transfer to any and every business looking to make cross-border payments.
                 </p>
@@ -539,7 +540,7 @@ const LandingPage = () => {
               </div>
             </div>
             <div className="card row_ten_card">
-              <div className="card-body row_ten_card_body p-0">
+              <div className="card-body row_ten_card_body p-lg-0">
                 <div className="w-100">
                   <p className="card-text row_ten_card_text">
                     Just three words : Eazzy Transfer  is Awesome!
@@ -654,19 +655,19 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="row footer">
-          <div className="">
+          <div className="mt-3 mt-md-0">
             <h6 className="footer_list_title">Eazzy transfer</h6>
             <h6 className="footer_list_subtitle">Transfer</h6>
             <h6 className="footer_list_subtitle">Convert</h6>
             <h6 className="footer_list_subtitle">Check Rates</h6>
           </div>
-          <div className="">
+          <div className="mt-3 mt-md-0">
             <h6 className="footer_list_title">Partnership</h6>
             <h6 className="footer_list_subtitle">Blog</h6>
             <h6 className="footer_list_subtitle">Support</h6>
             <h6 className="footer_list_subtitle">Newsletter</h6>
           </div>
-          <div className="">
+          <div className="mt-3 mt-md-0">
             <h5 className="footer_list_title">about</h5>
             <ul className="footer_list p-0">
               <li className="footer_list_subtitle">Twitter</li>
@@ -675,7 +676,7 @@ const LandingPage = () => {
               <li className="footer_list_subtitle">Youtube</li>
             </ul>
           </div>
-          <div className="">
+          <div className="mt-3 mt-md-0">
             <h5 className="footer_list_title">Support</h5>
             <ul className="footer_list p-0">
               <li className="footer_list_subtitle">
@@ -689,7 +690,7 @@ const LandingPage = () => {
               </li>
             </ul>
           </div>
-          <div className="">
+          <div className="mt-3 mt-md-0">
             <h6 className="footer_list_title">Company</h6>
             <p className="footer_list_subtitle">
               <Link to="privacy-policy" className="text-decoration-none footer_list_subtitle">Privacy Policy</Link>

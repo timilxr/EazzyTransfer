@@ -655,7 +655,7 @@ div.to_do_list > span:hover{
       /* background-color: #091E45; */
       color: #92929D;
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       justify-content: space-between;
       margin-left: 0!important;
       margin-right: 0!important;
@@ -1406,6 +1406,18 @@ color: #252733;
 
   /*---------------------------------------------media screens-----------------------------------------------*/
   @media screen and (min-width: 0px) and (max-width: 380px){
+    .documentation_row{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+    }
+    .helpdesk_row{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
     .sign_input_div{
         display: none;
     }
@@ -1620,6 +1632,18 @@ color: #252733;
 }
 
   @media screen and (min-width: 381px) and (max-width: 768px){
+    .documentation_row{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+    }
+    .helpdesk_row{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+    }
     .sign_input_div{
         display: none;
     }
@@ -1836,6 +1860,11 @@ color: #252733;
 
 
 @media screen and (min-width:768px) and (max-width:991px) {
+    .documentation_row{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+    }
     .sign_input_div{
         display: none;
     }
@@ -1855,10 +1884,10 @@ color: #252733;
     margin-left: 0;
     }
     .currency_one_div {
-        width: 130%;
+        width: 110%;
     }
     .currency_two_div {
-        width: 130%;
+        width: 110%;
     }
     .row_two{
         padding: 50px;
