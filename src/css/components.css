@@ -313,7 +313,8 @@ border-radius: 1px;
     padding: 2vw;
     padding-left: 7vw;
     /* opacity: 0.3; */
-    box-shadow: 0px 0px 40px -14px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0px 0px 40px -14px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
     border-radius: 16px;
   }
   .answer h2{
@@ -611,7 +612,8 @@ letter-spacing: 0.5px;
   padding: 10vw;
   /* padding-left: 7vw; */
   /* opacity: 0.3; */
-  box-shadow: 0px 0px 40px -14px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0px 0px 40px -14px rgba(0, 0, 0, 0.15); */
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
   border-radius: 16px;
 }
 .verify_container{

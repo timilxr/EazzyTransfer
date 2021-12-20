@@ -12,6 +12,17 @@
     text-decoration:none !important; 
     cursor:pointer;  
 }
+.header_ul .nav-item .nav-link{
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 300;
+font-size: 17px;
+line-height: 21px;
+
+color: #4B506D;
+
+opacity: 0.6;
+}
 .header_nav{
     justify-content: flex-end;
 }
@@ -79,6 +90,8 @@
 }
 .row_one_title{
     font-weight: 700;
+    line-height: 54px;
+    opacity: 0.9;
     font-size: 38px;
     font-family:'Poppins', sans-serif;
     color: #091E45;
@@ -132,7 +145,7 @@
     height: 80% !important;
 }
 .currency_exchange_row{
-    border-left: 2px solid #0a4a82;
+    border-left: 1.05641px solid #24346A;
     height: 40px;
     margin: 18px;
     margin-left: 23px;
@@ -146,21 +159,31 @@
     padding: .25rem;
 }
 .input_currency{
-    font-size: 13px;
-    color: #0a4a82;
-    font-weight: 400;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 20px;
+
+color: #24346A;
 }
 .output_currency{
-    font-size: 13px;
-    color: #0a4a82;
-    font-weight: 400;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 20px;
+
+color: #24346A;
 }
 .equal_to_sign{
-    font-size: 13px;
-    color: #0a4a82;
-    font-weight: 400;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 20px;
+
+color: #24346A;
 }
 .send_currency{
     font-size: 12px;
@@ -193,10 +216,19 @@
 }
 .row_one_col_two_subscript{
     margin-top: 20px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #0a4a82;
-    text-align: center;
+    font-family: 'Nunito';
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 22px;
+/* or 147% */
+
+text-align: center;
+
+color: #24346A;
+
+mix-blend-mode: normal;
+opacity: 0.8;
 }
 .currency_amount{
     color: #ebc002;
@@ -219,17 +251,24 @@
     background-color: #FDFDFD;
 }
 .row_two_title{
-    color: #0A4A82;
-    font-weight: 600;
-    font-size: 36px;
-    text-align: center;
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 44px;
+color: #091E45;
+text-align: center;
+/* identical to box height, or 129% */
+letter-spacing: 0.0025em;
     font-family: 'Poppins', sans-serif;
 }
 .row_two_subtitle{
-    color: #545A65;
-    font-weight: 400;
-    font-size: 15px;
-    text-align: center;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+/* or 137% */
+text-align: center;
+color: #838F91;
     font-family: 'Poppins', sans-serif;
 }
 .row_two_img{
@@ -238,6 +277,10 @@
 
 }
 .sub_row_two{
+    background-image: url(../imgs/bgcurve.svg);
+    background-position: center 39px;
+    background-size: auto 14%;
+    background-repeat: no-repeat;
     margin-top: 70px;
 }
 .framework_properties{
@@ -258,7 +301,7 @@
 .row_three{
     background-color: #fff;
     padding-top: 150px;
-    padding-left: 150px;
+    padding-left: 100px;
     padding-bottom: 50px;
     padding-right: 100px;
     height: auto;
@@ -282,17 +325,18 @@
 } */
 .sub_row_three{
     margin-top: 0px;
-    padding-right: 100px;
+    padding-right: 50px;
 }
 .numbers{
     position: absolute;
+    top: 20%;
     border-radius: 50%;
     padding: 12px;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     text-align: center;
     background-color: #0898A0;
     /* margin-right: 30px; */
@@ -307,18 +351,23 @@ div.to_do_list > span:hover{
 .to_do_title{
     margin-bottom: 10px;
     margin-left: 70px;
-    font-weight: 600;
-    font-size: 19px;
-    color: #3E3E3E;
+    font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 32px;
+color: #091E45;
     font-family: 'Poppins', sans-serif;
 }
 .to_do_subtitle{
     margin-left: 70px;
-    color: #545A65;
     text-align: justify;
-    font-size: 15px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 24px;
+/* or 160% */
+color: #4B506D;
 }
 .row_three_img{
     width: 100%;
@@ -347,7 +396,7 @@ div.to_do_list > span:hover{
     color: #545A65;
 }
 .row_four_btn{
-    border: 1px solid #363636 !important;
+    /* border:  0.4128px solid #091E45 !important; */
     border-radius: 5px;
 }
 .row_four_sub{
@@ -694,12 +743,12 @@ div.to_do_list > span:hover{
       margin-bottom: 0 !important;
   }
   .sub_footer_row{
-      padding: 50px;
+      padding: 0 50px 50px 50px;
       display: flex;
       align-items: center;
       text-align: center;
       font-size: 14px;
-      background-color: #f5f5f5;
+      /* background-color: #f5f5f5; */
       color: rgb(88, 88, 88);
       font-weight: 400;
   }

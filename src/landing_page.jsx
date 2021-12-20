@@ -66,7 +66,7 @@ const CurrencyOptions = [
     text: 'USD'
   },
   {
-    img: aus,
+    img: GBP,
     value: "Afghanistan Afghanis - AFN",
     text: 'GBP'
   },
@@ -224,7 +224,7 @@ const LandingPage = () => {
                 <li className="row_one_sublist">Competitive rate with Zero transacton fee</li>
                 <li className="row_one_sublist">Assured security on all transactions with 6 currencies.</li>
               </ul>
-              <button type="button" className="btn text-white create_acc_btn">Get a free account</button>
+              <button type="button" className="btn text-white create_acc_btn">Get Started</button>
             </div>
             <div className="col-md-2 col-lg-3 mt-4 mt-md-0"></div>
             <div className="row_one_col_two col-md-5 col-lg-4 mx-auto p-0">
@@ -245,7 +245,7 @@ const LandingPage = () => {
                 </div>
               </div>
               <div className="currency_exchange_row">
-                <h6 className="input_currency">1 EUR</h6><span className="equal_to_sign">=</span><h6 className="output_currency">0.8797 GBP</h6>
+                <h6 className="input_currency">1 EUR</h6><span className="equal_to_sign">&nbsp; = &nbsp; </span><h6 className="output_currency">0.8797 GBP</h6>
               </div>
               <div className="currency_two_div row d-flex align-items-center m-0">
                 <div className="col-md-6 col-6 text-white pl-lg-5">
@@ -263,7 +263,7 @@ const LandingPage = () => {
                   </div>
                 </div>
               </div>
-              <h6 className="row_one_col_two_subscript">Recipent gets <span className="currency_amount">£ 3,200</span> more when compared to regular traditional banks</h6>
+              <h6 className="row_one_col_two_subscript">Recipent gets <span className="currency_amount">£ 3,200</span> more when <u>compared to regular traditional banks</u></h6>
 
             </div>
           </div>
@@ -271,7 +271,7 @@ const LandingPage = () => {
         </div>
 
         <div className="row row_two">
-          <div className="col-md-5 m-auto">
+          <div className="col-12 m-auto">
             <h1 className="row_two_title">Why Eazzy Transfer?</h1>
             <h6 className="row_two_subtitle">
               Avoid the bank appointments, Send money to diffrent countries, always with a low and transparent fee. Paying your bills and subscriptions across currencies is easier than ever.
@@ -301,6 +301,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
+
         <div className="row row_three">
           <div style={{ backgroundImage: `url(${bg})` }}></div>
           <div className="col-md-6">
@@ -311,28 +312,28 @@ const LandingPage = () => {
   </h6> */}
             <div className="row sub_row_three">
               <div className="col-md-12">
-                <div className="to_do_list">
+                <div className="to_do_list mt-3 position-relative">
                   <div className="numbers">
                     <i className="fas fa-user fa-2x"></i>
                   </div>
                   <div className="to_do_title">Step 1:  Create Your Account</div>
                   <div className="to_do_subtitle">Signing up for your own Peyme account is easy and free. Just connection with phone or gmail instandly</div>
                 </div>
-                <div className="to_do_list">
+                <div className="to_do_list position-relative">
                   <div className="numbers">
                     <i className="fas fa-landmark fa-2x"></i>
                   </div>
                   <div className="to_do_title">Step 2: Upload a local currency</div>
                   <div className="to_do_subtitle">Link your preferred credit, debit or prepaid cards to your Payme account.</div>
                 </div>
-                <div className="to_do_list">
+                <div className="to_do_list position-relative">
                   <div className="numbers">
                     <i className="fas fa-wallet fa-2x"></i>
                   </div>
                   <div className="to_do_title">Step 3:  Convert to choice of currency</div>
                   <div className="to_do_subtitle">Thats all done. Now you can explore any apps, any webs that are ours partnets to transfer with them</div>
                 </div>
-                <div className="to_do_list">
+                <div className="to_do_list position-relative">
                   <div className="numbers">
                     <i className="fas fa-exchange-alt fa-2x"></i>
                   </div>
@@ -359,24 +360,24 @@ const LandingPage = () => {
             </h6>
             <div>
               <div className="row row_four_sub">
-                <div className="col-12 col-lg-5 row_four_col_one">
+                <div className="col-12 col-lg-5 row_four_col_one p-0">
                   <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[2]} />
                 </div>
                 <i className="fas fa-arrow-right fa-2x d-none d-lg-block mr-4"></i>
                 <i className="fas fa-arrow-down fa-2x mx-auto d-lg-none"></i>
-                <div className="col-12 col-lg-5 ml-0 row_four_col_two">
+                <div className="col-12 col-lg-5 ml-0 row_four_col_two p-0">
                   <SelectCountryCurrency options={CurrencyCountryOptions} selected={CurrencyCountryOptions[1]} />
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <div className="input-group align-items-center" style={{ backgroundColor: '#DDF1FF' }}>
-                    <div className="form-control bg-transparent" style={{ borderRadius: '0', height: 'auto' }}>
+                  <div className="input-group align-items-stretch" style={{ backgroundColor: '#DDF1FF', border: '0.4128px solid #091E45' }}>
+                    <div className="form-control bg-transparent pt-3" style={{ borderRadius: '0', height: 'auto', border: '0.4128px solid #091E45' }}>
                       <p className="ml-3 font-weight-bold text-wrap">13 hours delivery time</p>
                     </div>
                     {/* <input type="text" className="form-control" aria-label="..." /> */}
-                    <div className="input-group-btn m-0" style={{height: '100%'}}>
-                      <button type="button" className="btn btn-default dropdown-toggle row_four_btn" style={{ borderRadius: '0', border: '0', height: '100%'}} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal Time <span className="caret"></span></button>
+                    <div className="input-group-btn m-0 p-0 border-0" style={{height: '100%'}}>
+                      <div type="button" className="btn dropdown-toggle row_four_btn py-3 m-0" style={{ borderRadius: '0', border: '0', height: '100%'}} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Normal Time <span className="caret"></span></div>
                       <ul className="dropdown-menu dropdown-menu-right row_four_dropdown">
                         <li><a href="#">13 hours delivery</a></li>
                         <li><a href="#">Another action</a></li>
@@ -403,53 +404,6 @@ const LandingPage = () => {
               experience seamlessly way to send money abroad.
             </h6>
           </div>
-          {/* <div className="col-md-4">
-                <h2 className="row_nine_title">What are the major features</h2>
-            </div>
-            <div className="col-md-4"></div>
-            <div className="col-md-4">
-              <h6>
-              We will also facilitate the business marketing of these products with our SEO experts so that they become a ready-to-use website and help sell a product from the company
-              </h6>
-            </div>
-            <div className="card-deck mt-4">
-                <div className="card row_nine_card">
-                    <div className="icon_nine_holder ">
-
-                    </div>
-                  <div className="card-body">
-                    <h5 className="card-title row_three_card_title">Send a request</h5>
-                    <p className="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
-                  </div>
-                </div>
-                <div className="card row_nine_card">
-                    <div className="icon_nine_holder">
-
-                    </div>
-                  <div className="card-body">
-                    <h5 className="card-title  row_nine_card_title">Relocation Package</h5>
-                    <p className="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
-                  </div>
-                </div>
-                <div className="card row_nine_card">
-                    <div className="icon_nine_holder">
-
-                    </div>
-                  <div className="card-body">
-                    <h5 className="card-title  row_nine_card_title">Work Permit</h5>
-                    <p className="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
-                  </div>
-                </div>
-                <div className="card row_nine_card">
-                    <div className="icon_nine_holder ">
-
-                    </div>
-                  <div className="card-body">
-                    <h5 className="card-title  row_nine_card_title">Tourist Visa</h5>
-                    <p className="card-text">Publish your content automatically to ensure that your content reaches the right people. Publish your content automatically.</p>
-                  </div>
-                </div>
-              </div> */}
         </div>
 
         <div className="row row_five">
@@ -629,7 +583,7 @@ const LandingPage = () => {
                   <ul className="list-group">
                     {
                       FAQs.map((faq, index) =>
-                        <li key={index} onClick={() => setCurrentQuestion(faq)} className={`list-group-item ${currentQuestion === faq ? "question-active" : "question"}`}>
+                        <li key={index} onClick={() => setCurrentQuestion(faq)} className={`list-group-item border-0 ${currentQuestion === faq ? "question-active" : "question"}`} style={{boxShadow: '0px 0px 1px 1px rgba(0, 0, 0, 0.15)'}}>
                           <div className="d-flex justify-content-between">
                             {/* <img src={bigBullet} alt="" /> */}
                             <div className={`${currentQuestion === faq ? "bullet-active" : "bullet"}`}></div>
@@ -712,7 +666,7 @@ const LandingPage = () => {
             <img src={logo} alt="logo" className="eazzy_logo" />
           </div>
           <div className="text-center flex-fill">
-            <h6>Copyright © 2021. <a href="">Eazzy Transfer</a>. All rights reserved.</h6>
+            {/* <h6>Copyright © 2021. <a href="">Eazzy Transfer</a>. All rights reserved.</h6> */}
           </div>
         </div>
       </React.Fragment>
