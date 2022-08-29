@@ -210,7 +210,7 @@ const LandingPage = () => {
                 </div>
               </div>
               <div className="sign_input_div">
-                <Link to="sign-in" className="btn sign_in sign_in_btn">Log In</Link>
+                <Link to="/" className="btn sign_in sign_in_btn">Log In</Link>
                 <Link to="sign-up" className="btn sign_in_up sign_up_btn">Join Now</Link>
               </div>
             </nav>

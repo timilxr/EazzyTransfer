@@ -4,7 +4,6 @@ import sortImg from '../imgs/sort.svg';
 import filterImg from '../imgs/filter.svg';
 // import transaction_img from "../imgs/undraw_Annotation_re_h774 1.png"
 
-
 const TransactionHistory = () => {
     const [transactionType, setTransactionType] = useState('converted');
 
@@ -46,10 +45,10 @@ const TransactionHistory = () => {
                             <table className="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col" className="table_row" style={{ width: "500px" }}>Status</th>
+                                        <th scope="col" className="table_row" style={{ width: "500px", paddingLeft: "37px" }}>Account Status</th>
                                         <th scope="col" className="table_row">Customer Name</th>
                                         <th scope="col" className="table_row">Date</th>
-                                        <th scope="col" className="table_row" style={{ paddingLeft: "87px" }}>Priority</th>
+                                        <th scope="col" className="table_row" style={{ paddingLeft: "87px" }}>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>

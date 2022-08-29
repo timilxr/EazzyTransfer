@@ -1,0 +1,7 @@
+.add_account_card{
+}
+@media screen and (max-width: 576px) {
+    .add_account_card{
+        /* width: ; */
+    }
+}

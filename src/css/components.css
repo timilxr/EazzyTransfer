@@ -467,7 +467,9 @@ color: #4B506D;
 
 .sidebar_btn_active{
   border-left: 7px solid white;
-  background-color: #ececf048;
+  /* background-color: #ececf048; */
+  background-color: #00000048;
+  /* color: white !important; */
   height: 56px;
     width: 100%;
     display: flex;
@@ -477,6 +479,10 @@ color: #4B506D;
     margin-right: 0 !important;
     margin-left: 0 !important;
     padding: 18px;
+}
+
+.sidebar_btn_active .sidebar_btn_text, .sidebar_btn_active .sidebar_icon{
+  color: white;
 }
 
 .verify_heading{

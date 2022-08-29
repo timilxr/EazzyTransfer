@@ -51,6 +51,11 @@ const DashboardHeader = ({ showModal, header, ...props }) => {
                                     <h6 className="sidebar_btn_text">Settings</h6>
                                 </div>
                             </Link>
+                            <Link to="/" className="text-decoration-none">
+                                <div style={{ padding: "10px 20px" }}>
+                                    <button type="button" className="btn btn-block btn-danger">Logout</button>
+                                </div>
+                            </Link>
                         </div>
                         <div className="row p-3 pl-4">
                             <div className="col-12 col-md p-0" style={{ display: "flex", alignItems: 'center', paddingLeft: "0px" }}>
@@ -59,11 +64,11 @@ const DashboardHeader = ({ showModal, header, ...props }) => {
                                     <i className="fas fa-search ml-2"></i>
                                 </div>
                             </div>
-                            <div className="col-md-1 p-0" style={{display: 'flex', alignItems: 'center'}}>
+                            <div className="col-md-1 p-0" style={{ display: 'flex', alignItems: 'center' }}>
                                 <i className="fas fa-bell m-md-0 mx-md-auto"></i>
                             </div>
                             <div className="col-12 col-md-4 col-lg-6" style={{ display: "flex", alignItems: 'center', borderLeft: "1px solid #DFE0EB", paddingLeft: "0px" }}>
-                                <h6 className="user_name ml-md-3">FirstName LastName</h6>
+                                <h6 className="user_name ml-md-3">Andrew <br /> Jackson</h6>
                                 <Link to="/dashboard/accounts" className="text-decoration-none">
                                     <img src={avatar} alt="" className="user_image" />
                                 </Link>

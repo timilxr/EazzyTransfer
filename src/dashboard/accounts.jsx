@@ -87,7 +87,7 @@ const Accounts = ({ showModal, ...props }) => {
                                 </div>
                             </div>
                         </div>
-                        <div onClick={() => showModal('add account')} className="card account_card" style={{width: '11vw'}}>
+                        <div onClick={() => showModal('add account')} className="card account_card">
                             <div className="card-body account_card_body">
                                 <div className="row account_card_row">
                                     <div className="col-md-12">
@@ -97,7 +97,7 @@ const Accounts = ({ showModal, ...props }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="account_card d-flex align-content-center justify-content-center" style={{width: '8vw'}}>
+                        <div className="account_card d-flex align-content-center justify-content-center">
                             <button type="button" onClick={() => setShowAll(true)} className="btn btn-link see_all_btn">
                                 <span>view all</span>
                                 {/* <i className="fas fa-chevron-right"></i> */}

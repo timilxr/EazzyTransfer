@@ -35,15 +35,15 @@ const UpdateProfile = () => {
             <div className="w-100 bg-white">
                 <DashboardHeader header="Verification" />
             </div>
-            <div className="update_profile_body p-5">
+            <div className="update_profile_body py-5 p-md-5">
                 {!currentView && <VerifyIdentity proceed={proceed} />}
-                {currentView == 1 && <PreferredDocument proceed={proceed} SupportedDocuments={SupportedDocuments} setSelectedDocument={setSelectedDocument} selectedDocument={selectedDocument} />}
-                {currentView == 2 && <UploadPhoto proceed={proceed} selectedDocument={selectedDocument} />}
-                {currentView == 3 && <UploadPassportPhoto proceed={proceed} selectedDocument={selectedDocument} />}
-                {currentView == 'cam access denied 1' && <CameraAccessDenied1 proceed={proceed} />}
-                {currentView == 'selfie camera' && <SelfieCamera proceed={proceed} />}
-                {currentView == 'business or individual info' && <BusinessIndividualInfo proceed={proceed} />}
-                {currentView == 'appreciation' && <Appreciation proceed={proceed} />}
+                {currentView === 1 && <PreferredDocument proceed={proceed} SupportedDocuments={SupportedDocuments} setSelectedDocument={setSelectedDocument} selectedDocument={selectedDocument} />}
+                {currentView === 2 && <UploadPhoto proceed={proceed} selectedDocument={selectedDocument} />}
+                {currentView === 3 && <UploadPassportPhoto proceed={proceed} selectedDocument={selectedDocument} />}
+                {currentView === 'cam access denied 1' && <CameraAccessDenied1 proceed={proceed} />}
+                {currentView === 'selfie camera' && <SelfieCamera proceed={proceed} />}
+                {currentView === 'business or individual info' && <BusinessIndividualInfo proceed={proceed} />}
+                {currentView === 'appreciation' && <Appreciation proceed={proceed} />}
             </div>
         </div>
         </>

@@ -58,7 +58,7 @@ const Beneficiaries = ({ showModal, ...props }) => {
                                 </div>
                             </div>
                         </div>
-                        <img src={rightCaret} className="mr-4" alt="" />
+                        {/* <img src={rightCaret} className="mr-4" alt="" /> */}
                     </div>
                     <div className="p-2 mt-5">
                         <h3 id='other-beneficiary'>Other Beneficiary</h3>

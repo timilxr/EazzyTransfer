@@ -8,22 +8,22 @@ const BusinessIndividualInfo = ({ proceed, initAcctType, initPage, ...props }) =
     return (
         <>
             <div className="verify_container bg-white mx-auto rounded px-3 px-md-5 pb-5 pt-3">
-                {page != 6 ? <>
+                {page !== 6 ? <>
                     <p className="current_step mt-3">Step {page}/6</p>
-                    <h3 className="verify_heading mt-3">{page == 4 ? 'Business/ Individual Information' : 'Registered Address'}</h3>
+                    <h3 className="verify_heading mt-3">{page === 4 ? 'Business/ Individual Information' : 'Registered Address'}</h3>
                     <p className="verify_subheading">Please put in your information</p>
-                    {page == 4 &&
+                    {page === 4 &&
                         <>
                             <div className="d-flex flex-wrap justify-content-between mt-5">
                                 <div onClick={() => setAcctType('business')} className="d-flex align-items-center mb-2" style={{ cursor: 'pointer' }}>
                                     <div className={`check-box d-flex align-items-center ${acctType == 'business' ? 'border-0' : ''}`}>
-                                        {acctType == 'business' && <img src={Tick} className="img-fluid" width="100%" alt="business" />}
+                                        {acctType === 'business' && <img src={Tick} className="img-fluid" width="100%" alt="business" />}
                                     </div>
                                     <p className="image-instruction m-0 ml-2" style={{ fontSize: '14px' }}>Registering as a business</p>
                                 </div>
                                 <div onClick={() => setAcctType('individual')} className="d-flex align-items-center mb-2" style={{ cursor: 'pointer' }}>
-                                    <div className={`check-box d-flex align-items-center ${acctType == 'individual' ? 'border-0' : ''}`}>
-                                        {acctType == 'individual' && <img src={Tick} className="img-fluid" width="100%" alt="individual" />}
+                                    <div className={`check-box d-flex align-items-center ${acctType === 'individual' ? 'border-0' : ''}`}>
+                                        {acctType === 'individual' && <img src={Tick} className="img-fluid" width="100%" alt="individual" />}
                                     </div>
                                     <p className="image-instruction m-0 ml-2" style={{ fontSize: '14px' }}>Registering as an individual</p>
                                 </div>
@@ -58,7 +58,7 @@ const BusinessIndividualInfo = ({ proceed, initAcctType, initPage, ...props }) =
                                 </form>}
                         </>
                     }
-                    {page == 5 &&
+                    {page === 5 &&
                         <form className="mt-3">
                             <div class="form-row">
                                 <div class="form-group col-md-12">

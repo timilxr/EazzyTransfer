@@ -72,6 +72,11 @@ const Sidebar = ({ showModal, ...props }) => {
                         <h6 className="sidebar_btn_text">Settings</h6>
                     </div>
                 </Link>
+                <Link to="/" className="text-decoration-none">
+                    <div style={{ padding: "10px 20px" }}>
+                        <button type="button" className="btn btn-block btn-danger">Logout</button>
+                    </div>
+                </Link>
             </div>
             {/* // </div> */}
         </React.Fragment>
